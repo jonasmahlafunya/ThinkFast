@@ -1,0 +1,40 @@
+[09-Apr-2026 18:36:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nexasyst_thinkfast.users' doesn't exist in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php:32
+Stack trace:
+#0 /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php(32): PDO->prepare()
+#1 {main}
+  thrown in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php on line 32
+[09-Apr-2026 18:36:54 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nexasyst_thinkfast.users' doesn't exist in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php:103
+Stack trace:
+#0 /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php(103): PDO->prepare()
+#1 {main}
+  thrown in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php on line 103
+[09-Apr-2026 18:36:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nexasyst_thinkfast.users' doesn't exist in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php:103
+Stack trace:
+#0 /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php(103): PDO->prepare()
+#1 {main}
+  thrown in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php on line 103
+[09-Apr-2026 18:36:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nexasyst_thinkfast.users' doesn't exist in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php:103
+Stack trace:
+#0 /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php(103): PDO->prepare()
+#1 {main}
+  thrown in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php on line 103
+[09-Apr-2026 18:36:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nexasyst_thinkfast.users' doesn't exist in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php:103
+Stack trace:
+#0 /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php(103): PDO->prepare()
+#1 {main}
+  thrown in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php on line 103
+[09-Apr-2026 18:37:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nexasyst_thinkfast.users' doesn't exist in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php:103
+Stack trace:
+#0 /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php(103): PDO->prepare()
+#1 {main}
+  thrown in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php on line 103
+[09-Apr-2026 18:37:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nexasyst_thinkfast.users' doesn't exist in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php:103
+Stack trace:
+#0 /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php(103): PDO->prepare()
+#1 {main}
+  thrown in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php on line 103
+[09-Apr-2026 18:37:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nexasyst_thinkfast.users' doesn't exist in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php:103
+Stack trace:
+#0 /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php(103): PDO->prepare()
+#1 {main}
+  thrown in /home/nexasyst/public_html/thinkfast.nexasystems.co.za/user_auth.php on line 103

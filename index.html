@@ -1,0 +1,4864 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#6366F1" />
+
+  <!-- Primary SEO -->
+  <title>ThinkFast — Challenge Your Mind & Win Real Money | IQ Game</title>
+  <meta name="description"
+    content="Play ThinkFast: a fast, skill-based IQ challenge. Answer 10 questions correctly to double your stake. Mobile-optimized, secure, and exciting." />
+  <meta name="keywords"
+    content="IQ game, skill-based game, brain training, trivia, win money, South Africa, ThinkFast" />
+  <meta name="author" content="ThinkFast Games" />
+  <link rel="canonical" href="https://thinkfast.com/" />
+
+  <!-- Favicons -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>" />
+  <link rel="apple-touch-icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ThinkFast — Challenge Your Mind & Win Real Money" />
+  <meta property="og:description"
+    content="Answer 10 questions correctly and double your stake. One strike ends the game. Are you fast enough?" />
+  <meta property="og:image" content="https://thinkfast.com/og-image.jpg" />
+  <meta property="og:url" content="https://thinkfast.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ThinkFast" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ThinkFast — Challenge Your Mind & Win Real Money" />
+  <meta name="twitter:description"
+    content="Skill-based IQ challenge with real rewards. Fast-paced, fair, and competitive." />
+  <meta name="twitter:image" content="https://thinkfast.com/twitter-image.jpg" />
+
+  <!-- Structured Data (Game Application) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GameApplication",
+    "name": "ThinkFast",
+    "description": "Skill-based IQ Challenge Game",
+    "url": "https://thinkfast.com",
+    "applicationCategory": "Game",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "ZAR"
+    },
+    "inLanguage": "en-ZA",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ThinkFast Games"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <style>
+    :root {
+      --primary: #F43F5E;
+      --primary-dark: #E11D48;
+      --secondary: #6366F1;
+      --accent: #F59E0B;
+      --accent-neon: #39FF14;
+      /* Neon Green for money 💰 */
+      --bg-dark: #0F172A;
+      --bg-card: #FFFFFF;
+      --bg-card-dark: #1E293B;
+      --bg-white: #F8FAFC;
+      --text-dark: #0F172A;
+      --text-light: #64748B;
+      --text-on-dark: #F8FAFC;
+      --success: #10B981;
+      --danger: #EF4444;
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 10px;
+      --radius-pill: 60px;
+      --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      --glass-bg: rgba(255, 255, 255, 0.75);
+      --glass-border: rgba(255, 255, 255, 0.3);
+      --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-white: #0F172A;
+        --bg-card: #1E293B;
+        --neutral-light: #1E293B;
+        --neutral-border: #334155;
+        --text-dark: #F8FAFC;
+        --text-light: #94A3B8;
+        --glass-bg: rgba(30, 41, 59, 0.7);
+        --glass-border: rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: var(--bg-white);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3,
+    .poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Redesigned Header */
+    header {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      z-index: 10;
+    }
+
+    .user-welcome {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .user-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      border: 3px solid #fff;
+      box-shadow: var(--shadow-sm);
+      color: white;
+    }
+
+    .welcome-text h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.5px;
+    }
+
+    .welcome-text p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    /* Dashboard Hero */
+    .hero-container {
+      padding: 40px 24px;
+      text-align: left;
+      background: linear-gradient(135deg, #1E293B, #0F172A);
+      color: white;
+      margin: 10px 20px 24px;
+      border-radius: var(--radius-lg);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-premium);
+    }
+
+    .hero-container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(244, 63, 94, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+    }
+
+    .hero-p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      margin-bottom: 32px;
+      max-width: 90%;
+      line-height: 1.5;
+      color: #E2E8F0;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-btn {
+      border-radius: var(--radius-pill);
+      padding: 16px 32px;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-btn.primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 15px 30px rgba(244, 63, 94, 0.4);
+    }
+
+    .hero-btn.secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-btn.practice {
+      background: rgba(57, 255, 20, 0.1);
+      color: var(--accent-neon);
+      border: 1px solid rgba(57, 255, 20, 0.3);
+    }
+
+    .hero-btn:active {
+      transform: scale(0.95);
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Live Activity Feed (Ticker) */
+    .activity-ticker {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(8px);
+      padding: 12px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+    }
+
+    .ticker-content {
+      display: inline-flex;
+      gap: 50px;
+      animation: ticker 30s linear infinite;
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    .ticker-item strong {
+      color: var(--accent-neon);
+    }
+
+    @keyframes ticker {
+      0% {
+        transform: translateX(100vw);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Withdrawal Transparency Box */
+    .withdraw-info-bar {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--neutral-border);
+    }
+
+    .w-info-item {
+      text-align: center;
+    }
+
+    .w-info-val {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      display: block;
+    }
+
+    .w-info-lbl {
+      font-size: 0.65rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* Neon Money Highlight */
+    .money-highlight {
+      color: var(--accent-neon) !important;
+      text-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+    }
+
+    .trust-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 0 20px;
+      margin-bottom: 24px;
+    }
+
+    .trust-pill {
+      background: var(--bg-card);
+      padding: 16px 8px;
+      border-radius: var(--radius-md);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--neutral-border);
+      transition: var(--transition);
+    }
+
+    .trust-pill:active {
+      transform: translateY(2px);
+    }
+
+    .trust-pill .tp-icon {
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .trust-pill .tp-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .wallet-snapshot {
+      background: linear-gradient(135deg, #10B981, #059669);
+      margin: 0 20px 24px;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow-premium);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .ws-label {
+      font-size: 0.75rem;
+      opacity: 0.9;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .ws-value {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin: 4px 0;
+    }
+
+    .ws-earnings {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      font-weight: 600;
+    }
+
+    .ws-withdraw {
+      background: white;
+      color: #059669;
+      border: none;
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .ws-withdraw:active {
+      transform: scale(0.95);
+    }
+
+    .section-header {
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 16px;
+    }
+
+    .section-header h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.5px;
+    }
+
+    .view-all {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .view-all:active {
+      opacity: 0.6;
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      padding: 0 20px;
+      margin-bottom: 24px;
+    }
+
+    .cat-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--neutral-border);
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cat-card:active {
+      transform: scale(0.96);
+    }
+
+    .cat-card.large {
+      grid-column: span 2;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px;
+      color: white;
+      border: none;
+    }
+
+    .cat-icon {
+      font-size: 1.8rem;
+    }
+
+    .cat-name {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: inherit;
+    }
+
+    .cat-count {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 600;
+    }
+
+    .categories-grid .cat-card:nth-child(n+4) {
+      display: none;
+    }
+
+    .categories-grid.expanded .cat-card:nth-child(n+4) {
+      display: flex;
+      animation: popScale 0.3s ease-out;
+    }
+
+    .battles-promo {
+      background: linear-gradient(135deg, #6366F1, #4F46E5);
+      margin: 0 20px 24px;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-premium);
+    }
+
+    .battles-promo::after {
+      content: '⚔️';
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+      font-size: 6rem;
+      opacity: 0.15;
+      transform: rotate(-15deg);
+    }
+
+    .battles-tag {
+      background: #FDE047;
+      color: #000;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 0.7rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .battles-h3 {
+      margin: 0 0 4px;
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    .battles-p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+
+    .disclaimer-box {
+      padding: 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .marketing-terms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      padding: 0 20px;
+      margin-bottom: 24px;
+    }
+
+    .term-badge {
+      background: var(--neutral-light);
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-light);
+      border: 1px solid var(--neutral-border);
+    }
+
+    /* Hide elements by default */
+    .hidden {
+      display: none !important;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    /* Modal Styling Fixes for Premium Look */
+    .modal-content,
+    .auth-content {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      border: none;
+      padding: 30px 24px;
+      animation: slideUp 0.3s ease-out;
+    }
+
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Menu */
+    .menu-button {
+      background: var(--bg-white);
+      color: var(--primary);
+      padding: 6px 10px;
+      border: 1px solid var(--neutral-border);
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .menu-button:hover {
+      transform: translateY(-1px)
+    }
+
+    .menu-button:active {
+      transform: scale(0.97)
+    }
+
+    .menu-wrap {
+      position: relative
+    }
+
+    .menu-dropdown {
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      background: var(--bg-white);
+      border: 1px solid var(--neutral-border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 8px;
+      display: none;
+      min-width: 180px;
+      animation: dropdownFade 160ms ease-out;
+      z-index: 1001;
+    }
+
+    .menu-dropdown.active {
+      display: block
+    }
+
+    @keyframes dropdownFade {
+      from {
+        opacity: 0;
+        transform: translateY(-4px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      color: var(--neutral-dark);
+      cursor: pointer;
+      transition: var(--transition);
+      user-select: none;
+      font-size: 0.85rem;
+    }
+
+    .menu-item:hover {
+      background: var(--neutral-light)
+    }
+
+    .menu-separator {
+      height: 1px;
+      margin: 6px 8px;
+      background: var(--neutral-border);
+    }
+
+    /* Balance */
+    .balance-display {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      background: var(--success);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .balance-amount {
+      font-weight: 600
+    }
+
+    /* Tooltip */
+    [data-tooltip] {
+      position: relative
+    }
+
+    [data-tooltip]::before {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--neutral-dark);
+      color: white;
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+
+    [data-tooltip]:hover::before {
+      opacity: 1;
+      visibility: visible
+    }
+
+    /* Main containers */
+    main {
+      display: block;
+      padding: 12px;
+      padding-bottom: 150px;
+      /* Enhanced clear for bottom nav + gambling notice */
+      overflow-y: auto;
+    }
+
+    .container {
+      width: 100%;
+      max-height: none;
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      border: 1px solid var(--neutral-border);
+      padding: 6px 10px;
+      overflow: hidden;
+    }
+
+    /* Titles */
+    h1 {
+      margin: 0 0 8px;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--neutral-medium);
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    /* Buttons */
+    .btn {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border: 0;
+      border-radius: var(--radius-sm);
+      color: #fff;
+      background: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px)
+    }
+
+    .btn:active {
+      transform: scale(0.97)
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed
+    }
+
+    .btn-secondary {
+      background: var(--success)
+    }
+
+    .btn-danger {
+      background: var(--danger)
+    }
+
+    /* Inputs */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--neutral-border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-white);
+      color: var(--neutral-dark);
+      font-size: 0.9rem;
+      padding: 10px;
+      margin-top: 6px;
+      transition: var(--transition);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 12px
+    }
+
+    .form-group label {
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: var(--neutral-dark)
+    }
+
+    .form-error {
+      display: none;
+      color: var(--danger);
+      font-size: 0.75rem;
+      margin-top: 4px
+    }
+
+    .input-error {
+      border-color: var(--danger) !important;
+      box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1) !important
+    }
+
+    /* Alerts */
+    .alert-message {
+      display: none;
+      margin: 8px 0;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+      font-size: 0.85rem;
+    }
+
+    .alert-success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb
+    }
+
+    .alert-error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb
+    }
+
+    .alert-info {
+      background: #e8f3ff;
+      color: #0b5ed7;
+      border: 1px solid #cfe2ff
+    }
+
+    /* Toast notifications (fixed position) */
+    .toast-notification {
+      position: fixed;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 11000;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.85rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      max-width: 90vw;
+      text-align: center;
+    }
+
+    .toast-notification.toast-success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb
+    }
+
+    .toast-notification.toast-error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb
+    }
+
+    .toast-notification.toast-info {
+      background: #e8f3ff;
+      color: #0b5ed7;
+      border: 1px solid #cfe2ff
+    }
+
+    /* Loading screen */
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: var(--bg-white);
+      z-index: 9999;
+      transition: opacity 0.3s ease;
+    }
+
+    .loading-wrap {
+      display: grid;
+      gap: 12px;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .loading-logo {
+      font-size: 1.8rem;
+      color: var(--primary);
+      font-weight: 600
+    }
+
+    .loading-progress {
+      width: 180px;
+      height: 4px;
+      background: rgba(99, 102, 241, 0.2);
+      border-radius: 8px;
+      overflow: hidden
+    }
+
+    .loading-bar {
+      height: 100%;
+      width: 0%;
+      background: var(--primary);
+      transition: width 0.25s ease
+    }
+
+    .loading-text {
+      color: var(--neutral-medium);
+      font-weight: 500;
+      font-size: 0.9rem
+    }
+
+    /* Overlay loader */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 10000;
+      color: #fff;
+      text-align: center;
+    }
+
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid #f3f3f3;
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 8px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    /* Status strip */
+    .status-alert {
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 8px;
+      box-shadow: var(--shadow-sm);
+      background: var(--primary);
+      font-size: 0.85rem;
+    }
+
+    .status-alert.warning {
+      background: var(--danger)
+    }
+
+    /* Stats - Compact size */
+    .stats {
+      display: grid;
+      gap: 6px;
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 12px;
+    }
+
+    .stat-box {
+      background: var(--neutral-light);
+      color: var(--neutral-dark);
+      padding: 6px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-box.timer {
+      background: var(--primary);
+      color: white;
+      grid-column: 1 / -1;
+      transition: background 0.3s ease;
+    }
+
+    .stat-box.timer.danger {
+      background: var(--danger);
+      animation: pulse 0.5s ease infinite;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      opacity: 0.9;
+      margin-bottom: 2px;
+    }
+
+    .stat-value {
+      font-size: 0.85rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    /* Question UI */
+    .badges {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 6px 0
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.7rem;
+      color: #fff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .badge.level {
+      background: var(--success)
+    }
+
+    .badge.diff {
+      background: var(--primary)
+    }
+
+    .badge.diff.hard {
+      background: var(--danger)
+    }
+
+    .badge.cat {
+      background: var(--neutral-medium)
+    }
+
+    /* Live game screen adjustments */
+    #liveGameScreen {
+      padding-top: 8px;
+      /* Reduce top padding */
+    }
+
+    /* Move progress bar and streak counter closer to top */
+    #liveGameScreen .status-alert {
+      margin-bottom: 6px;
+    }
+
+    #liveGameScreen .loading-progress {
+      margin: 4px 0;
+      /* Reduced margin */
+    }
+
+    #liveGameScreen .streak-counter {
+      margin: 6px 0;
+      /* Reduced margin */
+    }
+
+    /* Compact the stats section */
+    #liveGameScreen .stats {
+      margin-bottom: 8px;
+      /* Reduced margin */
+      gap: 4px;
+      /* Tighter gap between stat boxes */
+    }
+
+    /* Move badges and question up */
+    #liveGameScreen .badges {
+      margin: 4px 0;
+      /* Reduced margin */
+    }
+
+    #liveGameScreen .question {
+      margin: 6px 0;
+      /* Reduced margin */
+      font-size: 0.95rem;
+      /* Slightly smaller font if needed */
+    }
+
+    /* Move options container up */
+    #liveGameScreen .options {
+      margin-top: 6px;
+      /* Reduced margin above options */
+      min-height: 90px;
+      /* Slightly reduced height */
+    }
+
+    /* Adjust spacing for text input questions */
+    #liveAnswer {
+      margin-top: 4px;
+      /* Reduced margin */
+    }
+
+    /* Move buttons and feedback up */
+    #liveGameScreen .btn {
+      margin-top: 4px;
+      /* Reduced margin */
+    }
+
+    #liveFeedback {
+      margin-top: 6px;
+      /* Reduced margin */
+    }
+
+
+
+    .question {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--neutral-dark);
+      margin: 6px 0;
+      line-height: 1.3;
+    }
+
+    .emoji-display {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      min-height: 50px;
+      padding: 10px;
+      background: var(--neutral-light);
+      border-radius: var(--radius);
+    }
+
+    /* Options - Modified to 2 lines with 2 answers each */
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+      min-height: 120px;
+    }
+
+    .option-btn {
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--neutral-border);
+      background: var(--bg-white);
+      color: var(--neutral-dark);
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      font-size: 0.85rem;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .option-btn:hover {
+      transform: translateY(-1px)
+    }
+
+    .option-btn:active {
+      transform: scale(0.97)
+    }
+
+    .option-btn.selected {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary)
+    }
+
+    .option-btn.correct-answer {
+      background: var(--success) !important;
+      color: #fff !important;
+      border-color: var(--success) !important;
+      animation: pulse 0.5s ease;
+    }
+
+    .option-btn.wrong-answer {
+      background: var(--danger) !important;
+      color: #fff !important;
+      border-color: var(--danger) !important;
+      animation: pulse 0.5s ease;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.03);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .feedback {
+      margin-top: 8px;
+      text-align: center;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      padding: 8px;
+      font-size: 0.85rem;
+    }
+
+    .feedback.correct {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb
+    }
+
+    .feedback.incorrect {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb
+    }
+
+    .correct-answer-display {
+      display: none;
+      margin-top: 8px;
+      padding: 8px;
+      border-left: 3px solid var(--success);
+      background: #ecfdf5;
+      color: #065f46;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    /* Streak */
+    .streak-counter {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin: 8px 0
+    }
+
+    .streak-item {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--neutral-border);
+      display: grid;
+      font-weight: 600;
+      color: var(--neutral-medium);
+      font-size: 0.7rem
+    }
+
+    .streak-item.active {
+      background: var(--success);
+      color: #fff;
+      transform: scale(1.06)
+    }
+
+    .streak-item.wrong {
+      background: var(--danger);
+      color: #fff;
+      transform: scale(1.06)
+    }
+
+    /* Stake selection */
+    .stake-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 8px
+    }
+
+    .stake-card {
+      padding: 10px;
+      border: 1px solid var(--neutral-border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-white);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .stake-card:hover {
+      transform: translateY(-1px)
+    }
+
+    .stake-card:active {
+      transform: scale(0.97)
+    }
+
+    .stake-card.selected {
+      border-color: var(--primary);
+      background: #eef2ff;
+      color: var(--primary-dark)
+    }
+
+    .stake-amount {
+      font-weight: 600;
+      font-size: 0.9rem
+    }
+
+    .stake-reward {
+      color: var(--neutral-medium);
+      font-size: 0.75rem
+    }
+
+    /* Sections */
+    .section {
+      background: var(--neutral-light);
+      padding: 12px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      margin-top: 8px;
+      overflow: hidden;
+    }
+
+    .section h3 {
+      margin: 0 0 6px;
+      color: var(--neutral-dark);
+      font-size: 0.95rem;
+      font-weight: 600
+    }
+
+    .section ul,
+    .section ol {
+      margin: 6px 0 0;
+      padding-left: 16px;
+      color: var(--neutral-medium);
+      font-size: 0.85rem
+    }
+
+    .section p {
+      color: var(--neutral-medium);
+      margin: 6px 0;
+      font-size: 0.85rem
+    }
+
+    /* Footer - Bottom Navigation */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg-white);
+      border-top: 1px solid var(--neutral-border);
+      padding: 12px 0;
+      /* Increased padding */
+      z-index: 1000;
+      display: flex;
+      justify-content: space-around;
+      height: 70px;
+      /* Added fixed height */
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      /* Increased gap */
+      padding: 6px 12px;
+      /* Increased padding */
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.75rem;
+      /* Slightly larger font */
+      color: var(--neutral-medium);
+      font-weight: 500;
+      flex: 1;
+      /* Ensure equal distribution */
+      max-width: 80px;
+      /* Limit maximum width */
+    }
+
+    .nav-item:hover {
+      background: var(--neutral-light);
+    }
+
+    .nav-item.active {
+      color: var(--primary);
+    }
+
+    .nav-icon {
+      font-size: 1.4rem;
+      /* Slightly larger icons */
+    }
+
+    .footer-links {
+      display: none
+    }
+
+    /* --- MOBILE RESPONSIVENESS --- */
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px;
+      }
+
+      header {
+        padding: 4px 8px;
+        height: 48px;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      .subtitle {
+        font-size: 0.8rem;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .stat-box.timer {
+        grid-column: span 2;
+      }
+
+      .options {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        min-height: auto;
+        gap: 10px;
+      }
+
+      .option-btn {
+        padding: 14px;
+        font-size: 0.95rem;
+      }
+
+      .stake-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .modal-content,
+      .auth-modal-content {
+        width: 100%;
+        border-radius: 16px 16px 0 0;
+        padding: 16px;
+      }
+
+      .emoji-display {
+        font-size: 2.2rem;
+        min-height: 60px;
+      }
+
+      .nav-item {
+        max-width: none;
+        padding: 8px 4px;
+      }
+
+      .nav-icon {
+        font-size: 1.2rem;
+      }
+
+      .nav-label {
+        font-size: 0.7rem;
+      }
+
+      main {
+        padding: 8px;
+      }
+
+      .container {
+        padding: 12px;
+      }
+    }
+
+    /* Modals */
+    .modal,
+    .auth-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(3px);
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0;
+      overflow: auto;
+      animation: slideUp 0.2s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .modal-content,
+    .auth-content {
+      width: 100%;
+      max-width: 100%;
+      background: var(--bg-white);
+      border-radius: 12px 12px 0 0;
+      padding: 16px;
+      max-height: 85vh;
+      overflow: auto;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .close-modal {
+      background: transparent;
+      border: 0;
+      color: var(--neutral-medium);
+      font-size: 1.4rem;
+      width: 32px;
+      height: 32px;
+      display: grid;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .close-modal:hover {
+      color: var(--danger);
+      background: var(--neutral-light)
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid var(--neutral-border);
+      margin-bottom: 8px
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 8px;
+      font-weight: 600;
+      color: var(--neutral-medium);
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.85rem
+    }
+
+    .tab.active {
+      color: var(--primary);
+      position: relative
+    }
+
+    .tab.active::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px 2px 0 0
+    }
+
+    /* Auth forms */
+    .auth-form {
+      display: none
+    }
+
+    .auth-form.active {
+      display: block
+    }
+
+    /* Profile modal styles */
+    .profile-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* Accordion */
+    .accordion {
+      margin-top: 8px;
+    }
+
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      cursor: pointer;
+      border-bottom: 1px solid var(--neutral-border);
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--neutral-dark);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .accordion.active .accordion-content {
+      max-height: 500px;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Dark mode specific fixes */
+    @media (prefers-color-scheme: dark) {
+      .alert-success {
+        background: #0f5132;
+        color: #d1e7dd;
+        border: 1px solid #0c4128;
+      }
+
+      .alert-error {
+        background: #842029;
+        color: #f8d7da;
+        border: 1px solid #6a1a21;
+      }
+
+      .alert-info {
+        background: #055160;
+        color: #cff4fc;
+        border: 1px solid #04414d;
+      }
+
+      .feedback.correct {
+        background: #0f5132;
+        color: #d1e7dd;
+        border: 1px solid #0c4128;
+      }
+
+      .feedback.incorrect {
+        background: #842029;
+        color: #f8d7da;
+        border: 1px solid #6a1a21;
+      }
+
+      .correct-answer-display {
+        background: #064e3b;
+        color: #a7f3d0;
+        border-left: 3px solid var(--success);
+      }
+
+      .stake-card.selected {
+        background: #1e1b4b;
+        color: #c7d2fe;
+      }
+
+      .menu-button {
+        color: var(--primary);
+      }
+
+      .section {
+        background: var(--neutral-light);
+      }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 12px
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .menu-button {
+        font-size: 0.75rem;
+        padding: 5px 8px
+      }
+
+      .options {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      .stat-value {
+        font-size: 0.8rem
+      }
+
+      .stat-label {
+        font-size: 0.6rem
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 10px
+      }
+
+      .options {
+        gap: 6px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      .stake-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .profile-stats-grid {
+        grid-template-columns: 1fr
+      }
+
+      .stat-value {
+        font-size: 0.75rem
+      }
+
+      .stat-label {
+        font-size: 0.55rem
+      }
+    }
+
+    /* Smooth Transitions */
+    .view-transition {
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loading screen -->
+  <div class="loading-screen" id="loadingScreen" role="status" aria-live="polite" aria-label="Loading ThinkFast">
+    <div class="loading-wrap">
+      <div class="loading-logo">🧠 ThinkFast</div>
+      <div class="loading-progress">
+        <div class="loading-bar" id="loadingBar"></div>
+      </div>
+      <div class="loading-text">Preparing your game...</div>
+    </div>
+  </div>
+
+  <!-- Overlay loader -->
+  <div class="overlay" id="loadingOverlay" aria-hidden="true">
+    <div class="spinner" aria-hidden="true"></div>
+    <div id="loadingOverlayText">Loading...</div>
+  </div>
+  <!-- Header -->
+  <header id="mainHeader">
+    <div class="user-welcome">
+      <div class="user-avatar" id="headerAvatar">👤</div>
+      <div class="welcome-text">
+        <p id="welcomeGreeting">Hello,</p>
+        <h2 id="welcomeName">Player</h2>
+      </div>
+    </div>
+
+    <div class="balance-display" id="balanceDisplay" data-tooltip="Your current balance" data-action="navigate"
+      data-args="wallet">
+      <div>💰</div>
+      <div class="balance-amount money-highlight" id="balanceAmount">R 0</div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Auth modal -->
+    <div class="auth-modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <div class="auth-content">
+        <div class="modal-header">
+          <span id="authTitle">🔐 Authentication</span>
+          <button class="close-modal" data-action="hideAuthModal" aria-label="Close">×</button>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Authentication tabs">
+          <button class="tab active" data-action="switchAuthTab" data-args="login" role="tab"
+            aria-selected="true">Login</button>
+          <button class="tab" data-action="switchAuthTab" data-args="register" role="tab"
+            aria-selected="false">Register</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active" novalidate autocomplete="on">
+          <div class="form-group">
+            <label for="loginEmail">Email address</label>
+            <input type="email" id="loginEmail" name="email" placeholder="you@example.com" inputmode="email"
+              aria-required="true" />
+            <div class="form-error" id="loginEmailError"></div>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="password" placeholder="Enter your password"
+              aria-required="true" />
+            <div class="form-error" id="loginPasswordError"></div>
+          </div>
+          <div style="text-align:center">
+            <a href="#" data-action="hideAuthModal;showPasswordResetModal"
+              style="color:var(--primary);font-weight:600;font-size:0.85rem">Forgot password?</a>
+          </div>
+          <button type="button" class="btn" data-action="login">Login</button>
+        </form>
+
+        <form id="registerForm" class="auth-form" novalidate autocomplete="on">
+          <div class="form-group">
+            <label for="registerEmail">Email address</label>
+            <input type="email" id="registerEmail" name="email" placeholder="you@example.com" inputmode="email"
+              aria-required="true" />
+            <div class="form-error" id="registerEmailError"></div>
+          </div>
+          <div class="form-group">
+            <label for="registerFirstName">First name</label>
+            <input type="text" id="registerFirstName" name="first_name" placeholder="Enter your first name"
+              aria-required="true" />
+            <div class="form-error" id="registerFirstNameError"></div>
+          </div>
+          <div class="form-group">
+            <label for="registerLastName">Last name</label>
+            <input type="text" id="registerLastName" name="last_name" placeholder="Enter your last name"
+              aria-required="true" />
+            <div class="form-error" id="registerLastNameError"></div>
+          </div>
+          <div class="form-group">
+            <label for="registerCellphone">Cellphone</label>
+            <input type="tel" id="registerCellphone" name="cellphone" placeholder="+27..." inputmode="tel"
+              aria-required="true" />
+            <div class="form-error" id="registerCellphoneError"></div>
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" name="password" placeholder="Choose a password"
+              aria-required="true" />
+            <div class="form-error" id="registerPasswordError"></div>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm password</label>
+            <input type="password" id="confirmPassword" name="password_confirm" placeholder="Confirm your password"
+              aria-required="true" />
+            <div class="form-error" id="confirmPasswordError"></div>
+          </div>
+          <div class="form-group">
+            <label for="referralCode">Referral code (optional)</label>
+            <input type="text" id="referralCode" name="referral_code" placeholder="TF-XXXXXXX" />
+          </div>
+          <button type="button" class="btn btn-secondary" data-action="register">Register & get R10 bonus</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Login screen -->
+    <section id="loginScreen" class="container" style="display:none">
+      <h1>🧠 ThinkFast</h1>
+      <p class="subtitle">Skill-based IQ challenges with real rewards</p>
+      <button class="btn" data-action="showAuthModal">Login to play</button>
+      <p style="margin-top:8px;text-align:center;color:var(--neutral-medium);font-size:0.85rem">
+        New here?
+        <a href="#" data-action="showAuthModal;switchAuthTab" data-args="register"
+          style="color:var(--primary);font-weight:600">Create an account</a>
+      </p>
+    </section>
+
+    <!-- Game content -->
+    <section id="gameContent" style="display:none;width:100%">
+      <!-- Live Activity Ticker -->
+      <div class="activity-ticker">
+        <div class="ticker-content" id="liveActivityTicker">
+          <!-- Populated by JS -->
+          <div class="ticker-item poppins">💰 <strong>ThinkFast</strong> Loading live activity...</div>
+        </div>
+      </div>
+
+      <!-- Dashboard / Start screen -->
+      <section id="liveStartScreen" class="view active">
+
+        <!-- Hero Section -->
+        <div class="hero-container">
+          <h1 class="hero-h1 poppins">ThinkFast.<br>Win Fast.</h1>
+          <p class="hero-p">The #1 skill-based IQ challenge. One strike and you're out. Are you fast enough to double
+            your money?</p>
+          <div class="hero-btns">
+            <button class="hero-btn primary" data-action="checkLiveAuthStatus">
+              <span>🚀 Play for Cash</span>
+            </button>
+            <button class="hero-btn practice" data-action="startPracticeMode">
+              <span>🛡️ Free Practice</span>
+            </button>
+          </div>
+
+          <div class="live-stats-ribbon poppins"
+            style="margin-top: 32px; justify-content: center; backdrop-filter: blur(16px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-md);">
+            <div class="stat-item">
+              <span class="lbl">Total Paid</span>
+              <span class="val money-highlight" id="statsPaidToday">R0</span>
+            </div>
+            <div class="stat-item">
+              <span class="lbl">Active Now</span>
+              <span class="val" id="statsActiveNow">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="lbl">Top Winner</span>
+              <span class="val money-highlight" id="statsTopWinner">R0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Pillars -->
+        <div class="trust-section">
+          <div class="trust-pill">
+            <span class="tp-icon">⚡</span>
+            <span class="tp-label">Instant<br>Withdrawals</span>
+          </div>
+          <div class="trust-pill">
+            <span class="tp-icon">🛡️</span>
+            <span class="tp-label">Secure<br>Wallet</span>
+          </div>
+          <div class="trust-pill">
+            <span class="tp-icon">🙌</span>
+            <span class="tp-label">Real Players<br>Winning</span>
+          </div>
+        </div>
+
+        <!-- Wallet UI -->
+        <div class="wallet-snapshot" id="dashboardWallet">
+          <div class="ws-info">
+            <span class="ws-label poppins">Current Balance</span>
+            <span class="ws-value money-highlight" id="wsBalance">R 0.00</span>
+            <span class="ws-earnings" id="wsEarnings">Total Earnings: R 0.00</span>
+          </div>
+          <button class="ws-withdraw" data-action="navigate" data-args="wallet">Withdraw</button>
+        </div>
+
+        <!-- Live Battles Promo -->
+        <div class="battles-promo" data-action="showBattlesTeaser">
+          <span class="battles-tag">New</span>
+          <h3 class="battles-h3">Live Battles: PvP</h3>
+          <p class="battles-p">Challenge real players. Winner takes the cash.</p>
+        </div>
+
+        <div class="section-header">
+          <h3>Explore Categories</h3>
+          <a href="#" class="view-all" data-action="showAllCategories">View All</a>
+        </div>
+
+        <div class="categories-grid">
+          <div class="cat-card large" style="background: linear-gradient(135deg, #FF4D4D, #F43F5E);"
+            data-action="selectCategory" data-args="Space">
+            <div class="cat-info">
+              <div class="cat-name">Space Odyssey</div>
+              <div class="cat-count">50+ Premium Questions</div>
+            </div>
+            <div class="cat-icon">🪐</div>
+          </div>
+
+          <div class="cat-card" data-action="selectCategory" data-args="Education">
+            <div class="cat-icon">📚</div>
+            <div class="cat-name">Education</div>
+            <div class="cat-count">30+ Qs</div>
+          </div>
+
+          <div class="cat-card" data-action="selectCategory" data-args="Music">
+            <div class="cat-icon">🔊</div>
+            <div class="cat-name">Music</div>
+            <div class="cat-count">25+ Qs</div>
+          </div>
+
+          <!-- Hidden initially -->
+          <div class="cat-card" data-action="selectCategory" data-args="Geography">
+            <div class="cat-icon">🌍</div>
+            <div class="cat-name">Geography</div>
+            <div class="cat-count">40+ Qs</div>
+          </div>
+
+          <div class="cat-card" data-action="selectCategory" data-args="Science">
+            <div class="cat-icon">🧪</div>
+            <div class="cat-name">Science</div>
+            <div class="cat-count">35+ Qs</div>
+          </div>
+
+          <div class="cat-card large" style="background: linear-gradient(135deg, #FF4D4D, #F43F5E);"
+            data-action="startChallenge" data-args="daily">
+            <div class="cat-info">
+              <div class="cat-name">Daily Cash Challenge</div>
+              <div class="cat-count">Win R100 Today • Limited Slots</div>
+            </div>
+            <div class="cat-icon">💰</div>
+          </div>
+
+          <div class="cat-card large" style="background: linear-gradient(135deg, #10B981, #059669);"
+            data-action="startChallenge" data-args="friday">
+            <div class="cat-info">
+              <div class="cat-name">Friday Night Challenge</div>
+              <div class="cat-count">Big Prize Pools • Skill Only</div>
+            </div>
+            <div class="cat-icon">🏆</div>
+          </div>
+        </div>
+
+        <div class="disclaimer-box">
+          <p>ThinkFast is a skill-based IQ game. Rewards are based on performance, not luck.</p>
+        </div>
+
+        <div style="padding: 0 20px 120px; display: flex; justify-content: center;">
+          <button class="hero-btn primary"
+            style="padding: 18px 60px; font-size: 1.1rem; box-shadow: 0 15px 30px rgba(244, 63, 94, 0.4);"
+            data-action="checkLiveAuthStatus">LET'S START</button>
+        </div>
+      </section>
+
+      <!-- Matchmaking Screen -->
+      <div id="matchmakingScreen" class="container" style="display:none; text-align:center; padding: 40px 20px;">
+        <div class="matchmaking-spinner">
+          <div class="spinner-core"></div>
+          <div class="pulse-ring"></div>
+        </div>
+        <h2 style="margin-top:30px">Finding Opponent...</h2>
+        <p class="subtitle">Searching for a suitable challenger in your region</p>
+
+        <div class="match-players"
+          style="display:flex; justify-content:center; align-items:center; gap:30px; margin-top:40px">
+          <div class="player-slot user">
+            <div class="avatar-large">👤</div>
+            <div class="player-name" id="matchUserName">You</div>
+          </div>
+          <div class="match-vs">VS</div>
+          <div class="player-slot opponent">
+            <div class="avatar-large" id="matchOpponentAvatar">?</div>
+            <div class="player-name" id="matchOpponentName">Searching...</div>
+          </div>
+        </div>
+        <div style="margin-top:40px; opacity:0.6; font-size:0.8rem">
+          Estimated wait: <span id="matchWaitTime">4s</span>
+        </div>
+      </div>
+
+      <!-- Live game screen -->
+      <div id="liveGameScreen" class="container" style="display:none">
+        <div class="status-alert" id="liveStatusAlert" style="display:none"></div>
+        <div class="status-alert warning" id="oneStrikeWarning">🚨 One wrong answer ends the game!</div>
+
+        <!-- Progress Indicators -->
+        <div class="game-progress-container" style="margin:15px 0">
+          <div class="progress-label-flex">
+            <span>Your Progress</span>
+            <span id="playerProgressPct">0%</span>
+          </div>
+          <div class="loading-progress" style="height:10px">
+            <div class="loading-bar" id="progressFill" style="background: var(--primary)"></div>
+          </div>
+
+          <div class="opponent-progress-box" id="opponentProgressBox" style="margin-top:15px; display:none">
+            <div class="progress-label-flex">
+              <span id="opponentNameLabel">Opponent Progress</span>
+              <span id="opponentProgressPct">0%</span>
+            </div>
+            <div class="loading-progress" style="height:10px; background: rgba(0,0,0,0.1)">
+              <div class="loading-bar" id="opponentProgressFill" style="background: var(--accent); width: 0%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Streak -->
+        <div class="streak-counter" id="streakCounter" aria-label="Streak counter"></div>
+
+        <!-- Stats - Compact size -->
+        <div class="stats" role="group" aria-label="Game statistics">
+          <div class="stat-box timer" id="liveTimerBox">
+            <div class="stat-label">Time</div>
+            <div class="stat-value" id="liveTimer">20</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Question</div>
+            <div class="stat-value" id="liveQuestionNum">1/10</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">✓ Correct</div>
+            <div class="stat-value" id="liveCorrect">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Streak</div>
+            <div class="stat-value" id="liveStreak">0</div>
+          </div>
+        </div>
+
+        <!-- Question -->
+        <div class="badges">
+          <span class="badge level" id="liveLevelBadge">Question 1</span>
+          <span class="badge diff" id="liveDiffBadge">Easy</span>
+          <span class="badge cat" id="liveCategoryTag">General</span>
+        </div>
+
+        <div class="question" id="liveQuestion" aria-live="polite" aria-atomic="true"></div>
+        <div class="emoji-display" id="liveEmojiContainer" aria-hidden="true"></div>
+
+        <div id="liveOptionsContainer" style="display:none" aria-label="Answer options">
+          <div class="options" id="liveOptions"></div>
+        </div>
+
+        <input type="text" id="liveAnswer" placeholder="Type your answer..." style="display:none"
+          aria-label="Enter your answer" />
+
+        <div style="display:grid;gap:6px;margin-top:6px">
+          <button class="btn" id="liveSubmitBtn" data-action="liveSubmitAnswer" disabled>Submit answer</button>
+          <button class="btn btn-danger" data-action="liveEndGameManually">End game</button>
+        </div>
+
+        <div id="liveFeedback" aria-live="polite"></div>
+        <div class="correct-answer-display" id="liveCorrectAnswerDisplay"></div>
+      </div>
+
+      <!-- End screen -->
+      <div id="liveEndScreen" class="container" style="display:none">
+        <h1>Game over</h1>
+        <p class="subtitle"><strong id="livePlayerName"></strong></p>
+        <p style="text-align:center;font-size:1rem">Final balance: <strong id="liveFinalScore"></strong></p>
+        <p style="text-align:center;font-size:0.85rem" id="liveMessage"></p>
+
+        <div id="liveStats" class="section">
+          <h3>Your stats</h3>
+          <!-- populated dynamically -->
+        </div>
+
+        <!-- Rating & comments -->
+        <div id="ratingCommentSection" class="section" style="display:none">
+          <h3>How was your experience?</h3>
+          <p>Please rate the game and leave a comment</p>
+          <div id="ratingStars" style="display:flex;gap:6px;justify-content:center">
+            <span class="star" data-rating="1" aria-label="1 star"
+              style="font-size:1.6rem;cursor:pointer;color:#ddd">★</span>
+            <span class="star" data-rating="2" aria-label="2 stars"
+              style="font-size:1.6rem;cursor:pointer;color:#ddd">★</span>
+            <span class="star" data-rating="3" aria-label="3 stars"
+              style="font-size:1.6rem;cursor:pointer;color:#ddd">★</span>
+            <span class="star" data-rating="4" aria-label="4 stars"
+              style="font-size:1.6rem;cursor:pointer;color:#ddd">★</span>
+            <span class="star" data-rating="5" aria-label="5 stars"
+              style="font-size:1.6rem;cursor:pointer;color:#ddd">★</span>
+          </div>
+          <textarea id="commentBox" placeholder="Tell us about your experience... (optional)"
+            style="font-size:0.85rem"></textarea>
+          <button class="btn btn-secondary" data-action="submitFeedback">Submit feedback</button>
+        </div>
+
+        <div id="feedbackThankYou" class="section" style="display:none;text-align:center">
+          <h3>🎉 Thank you for your feedback!</h3>
+          <p>Your feedback helps us improve the game.</p>
+        </div>
+
+        <div style="display:grid;gap:6px;margin-top:6px">
+          <button class="btn" data-action="livePlayAgain">Play again</button>
+          <button class="btn btn-secondary" data-action="showProfileModal">View profile</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="navigation">
+    <div style="text-align: center; padding: 20px; font-size: 0.75rem; opacity: 0.6; line-height: 1.6;">
+      <p style="font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Nexa Systems
+        (Pty) Ltd</p>
+      <p>ThinkFast IQ Challenge &copy; 2026. All Rights Reserved.<br>
+        Skill-based platform. Not a gambling product.</p>
+    </div>
+    <div class="nav-item active" data-action="navigate" data-args="home">
+      <div class="nav-icon">🏠</div>
+      <div class="nav-label">Home</div>
+    </div>
+    <div class="nav-item" data-action="navigate" data-args="challenge">
+      <div class="nav-icon">🏆</div>
+      <div class="nav-label">Leaderboard</div>
+    </div>
+    <div class="nav-item" data-action="navigate" data-args="wallet">
+      <div class="nav-icon">💰</div>
+      <div class="nav-label">Wallet</div>
+    </div>
+    <div class="nav-item" data-action="navigate" data-args="profile">
+      <div class="nav-icon">👤</div>
+      <div class="nav-label">Profile</div>
+    </div>
+  </footer>
+
+  <!-- About modal -->
+  <div class="modal" id="aboutModal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="aboutTitle">🧠 About ThinkFast</span>
+        <button class="close-modal" data-action="hideAboutModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align:center; margin-bottom:20px;">
+          <h2 class="poppins" style="margin-bottom:4px">Nexa Systems</h2>
+          <p style="font-size:0.8rem; opacity:0.7">Official Skill-Gaming Division</p>
+        </div>
+        <p>ThinkFast is a premium skill-based IQ challenge developed by <strong>Nexa Systems (Pty) Ltd</strong>. We
+          believe in rewarding cognitive speed and accuracy through a fair, transparent, and secure platform.</p>
+        <div class="section">
+          <h3>Business Integrity</h3>
+          <ul>
+            <li>📍 Registered Business: Nexa Systems (Pty) Ltd</li>
+            <li>⚖️ Legally Compliant: Skill-based platform (non-gambling)</li>
+            <li>💳 Secure Transfers: Instant EFT & Bank Integrations</li>
+            <li>📩 Contact: support@nexasystems.co.za</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>How it works</h3>
+          <p>ThinkFast determine winners based purely on <strong>performance</strong>. There is <strong>zero
+              luck</strong> involved — only your ability to process information efficiently determines your success.
+            Answer 10 questions perfectly to double your money.</p>
+        </div>
+      </div>
+      <button class="btn" data-action="hideAboutModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Support modal -->
+  <div class="modal" id="supportModal" role="dialog" aria-modal="true" aria-labelledby="supportTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="supportTitle">🛟 Customer Support</span>
+        <button class="close-modal" data-action="hideSupportModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <p>We're here to help. Share a few details and we'll get back to you.</p>
+
+        <div class="form-group">
+          <label for="supportName">Your name</label>
+          <input type="text" id="supportName" placeholder="Enter your name" aria-required="true" />
+          <div class="form-error" id="supportNameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="supportEmail">Email address</label>
+          <input type="email" id="supportEmail" placeholder="you@example.com" inputmode="email" aria-required="true" />
+          <div class="form-error" id="supportEmailError"></div>
+        </div>
+        <div class="form-group">
+          <label for="supportCategory">Issue category</label>
+          <select id="supportCategory" aria-required="true">
+            <option value="">Select category</option>
+            <option value="technical">Technical issue</option>
+            <option value="payment">Payment issue</option>
+            <option value="gameplay">Gameplay question</option>
+            <option value="account">Account issue</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="form-error" id="supportCategoryError"></div>
+        </div>
+        <div class="form-group">
+          <label for="supportMessage">Message</label>
+          <textarea id="supportMessage" rows="4" placeholder="Describe your issue..." aria-required="true"></textarea>
+          <div class="form-error" id="supportMessageError"></div>
+        </div>
+        <div class="alert-message" id="supportAlert"></div>
+      </div>
+      <div style="display:flex;gap:6px">
+        <button class="btn" data-action="submitSupportRequest">Send message</button>
+        <button class="btn btn-secondary" data-action="hideSupportModal">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaderboard modal -->
+  <div class="modal" id="leaderboardModal" role="dialog" aria-modal="true" aria-labelledby="leaderboardTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="leaderboardTitle">🏆 Leaderboard</span>
+        <button class="close-modal" data-action="hideLeaderboardModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="tabs" role="tablist" aria-label="Leaderboard tabs">
+          <button class="tab active" data-action="switchLeaderboardTab" data-args="daily" role="tab"
+            aria-selected="true">Daily</button>
+          <button class="tab" data-action="switchLeaderboardTab" data-args="weekly" role="tab"
+            aria-selected="false">Weekly</button>
+          <button class="tab" data-action="switchLeaderboardTab" data-args="allTime" role="tab"
+            aria-selected="false">All time</button>
+        </div>
+
+        <div id="leaderboardList" class="section" style="max-height:300px;overflow:auto">
+          <!-- populated dynamically -->
+        </div>
+
+        <div class="section">
+          <h3>Your position</h3>
+          <div id="userLeaderboardPosition">
+            <p>Login to see your position on the leaderboard.</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn" data-action="hideLeaderboardModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Banking modal -->
+  <div class="modal" id="bankModal" role="dialog" aria-modal="true" aria-labelledby="bankTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="bankTitle">💰 Banking</span>
+        <button class="close-modal" data-action="hideBankModal" aria-label="Close">×</button>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Banking tabs">
+        <button class="tab active" data-action="switchBankTab" data-args="deposit" role="tab"
+          aria-selected="true">Deposit</button>
+        <button class="tab" data-action="switchBankTab" data-args="withdraw" role="tab"
+          aria-selected="false">Withdraw</button>
+      </div>
+
+      <!-- Deposit -->
+      <div id="depositForm" class="section" style="display:block">
+        <div class="form-group">
+          <label for="depositAmount">Amount (R)</label>
+          <input type="number" id="depositAmount" min="10" value="50" placeholder="Enter amount" aria-required="true" />
+        </div>
+
+        <div class="form-group">
+          <label>Payment method</label>
+          <div style="display:grid;gap:6px">
+            <label style="display:flex;gap:6px;align-items:center;cursor:pointer">
+              <input type="radio" name="paymentMethod" value="card" checked /> 💳 Credit/Debit card
+            </label>
+            <label style="display:flex;gap:6px;align-items:center;cursor:pointer">
+              <input type="radio" name="paymentMethod" value="eft" /> 🏦 EFT/Bank transfer
+            </label>
+          </div>
+        </div>
+
+        <div id="cardDetails">
+          <div class="form-group">
+            <label for="cardNumber">Card number</label>
+            <input type="text" id="cardNumber" inputmode="numeric" placeholder="1234 5678 9012 3456" maxlength="19"
+              aria-required="true" />
+            <div class="form-error" id="cardNumberError"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div class="form-group">
+              <label for="expiryDate">Expiry</label>
+              <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5" aria-required="true" />
+              <div class="form-error" id="expiryDateError"></div>
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" inputmode="numeric" placeholder="123" maxlength="3" aria-required="true" />
+              <div class="form-error" id="cvvError"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cardHolder">Card holder name</label>
+            <input type="text" id="cardHolder" placeholder="John Doe" aria-required="true" />
+            <div class="form-error" id="cardHolderError"></div>
+          </div>
+        </div>
+
+        <div id="eftDetails" style="display:none">
+          <div class="section">
+            <h3>EFT details</h3>
+            <p><strong>Bank:</strong> Standard Bank</p>
+            <p><strong>Account name:</strong> ThinkFast Games</p>
+            <p><strong>Account number:</strong> 0123456789</p>
+            <p><strong>Branch code:</strong> 051001</p>
+            <p><strong>Reference:</strong> <span id="eftReference">TF-1234</span></p>
+            <p style="color:var(--neutral-medium);font-size:0.85rem">Use the reference above when making your EFT.
+              Credit within ~2 hours.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:6px;margin-top:6px">
+          <button class="btn btn-secondary" data-action="processDeposit">Deposit now</button>
+          <button class="btn" data-action="hideBankModal">Close</button>
+        </div>
+      </div>
+
+      <!-- Withdraw -->
+      <div id="withdrawForm" class="section" style="display:none">
+        <div class="form-group">
+          <label for="withdrawAmount">Amount (R)</label>
+          <input type="number" id="withdrawAmount" min="50" value="50" placeholder="Enter amount"
+            aria-required="true" />
+          <small style="color:var(--neutral-medium);font-size:0.75rem">Minimum withdrawal: R50</small>
+        </div>
+        <div class="form-group">
+          <label for="bankName">Bank name</label>
+          <select id="bankName" aria-required="true">
+            <option value="">Select bank</option>
+            <option value="absa">ABSA</option>
+            <option value="standard">Standard Bank</option>
+            <option value="fnb">FNB</option>
+            <option value="nedbank">Nedbank</option>
+            <option value="capitec">Capitec</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="form-error" id="bankNameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="accountHolder">Account holder name</label>
+          <input type="text" id="accountHolder" placeholder="As it appears on bank account" aria-required="true" />
+          <div class="form-error" id="accountHolderError"></div>
+        </div>
+        <div class="form-group">
+          <label for="accountNumber">Account number</label>
+          <input type="text" id="accountNumber" inputmode="numeric" placeholder="Enter account number"
+            aria-required="true" />
+          <div class="form-error" id="accountNumberError"></div>
+        </div>
+        <div class="form-group">
+          <label for="accountType">Account type</label>
+          <select id="accountType" aria-required="true">
+            <option value="">Select account type</option>
+            <option value="savings">Savings</option>
+            <option value="cheque">Cheque</option>
+            <option value="transmission">Transmission</option>
+          </select>
+          <div class="form-error" id="accountTypeError"></div>
+        </div>
+        <div class="form-group">
+          <label for="branchCode">Branch code</label>
+          <input type="text" id="branchCode" inputmode="numeric" placeholder="Enter branch code" aria-required="true" />
+          <div class="form-error" id="branchCodeError"></div>
+        </div>
+
+        <div style="display:flex;gap:6px;margin-top:6px">
+          <button class="btn btn-secondary" data-action="processWithdrawal">Request withdrawal</button>
+          <button class="btn" data-action="hideBankModal">Close</button>
+        </div>
+
+        <!-- Withdraw Transparency Box -->
+        <div class="withdraw-info-bar">
+          <div class="w-info-item">
+            <span class="w-info-lbl">Min Amount</span>
+            <span class="w-info-val money-highlight">R50.00</span>
+          </div>
+          <div class="w-info-item">
+            <span class="w-info-lbl">Processing Time</span>
+            <span class="w-info-val">24-48 Business Hours</span>
+          </div>
+          <div class="w-info-item">
+            <span class="w-info-lbl">Payment Method</span>
+            <span class="w-info-val">Instant EFT / Bank</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile modal -->
+  <div class="modal" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="profileTitle">👤 Player profile</span>
+        <button class="close-modal" data-action="hideProfileModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="section">
+          <h3>Player information</h3>
+          <div class="profile-stats-grid">
+            <div class="stake-card">
+              <div id="profileUsername" class="stake-amount">—</div>
+              <div class="stake-reward">Username</div>
+            </div>
+            <div class="stake-card">
+              <div id="profileBalance" class="stake-amount money-highlight">R0</div>
+              <div class="stake-reward">Balance</div>
+            </div>
+            <div class="stake-card">
+              <div id="profileGamesPlayed" class="stake-amount">0</div>
+              <div class="stake-reward">Games played</div>
+            </div>
+            <div class="stake-card">
+              <div id="profileTotalWinnings" class="stake-amount">R0</div>
+              <div class="stake-reward">Total winnings</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Performance statistics</h3>
+          <div class="profile-stats-grid">
+            <div class="stake-card">
+              <div id="profileCorrectAnswers" class="stake-amount">0</div>
+              <div class="stake-reward">Correct</div>
+            </div>
+            <div class="stake-card">
+              <div id="profileWrongAnswers" class="stake-amount">0</div>
+              <div class="stake-reward">Wrong</div>
+            </div>
+            <div class="stake-card">
+              <div id="profileBestStreak" class="stake-amount">0</div>
+              <div class="stake-reward">Best streak</div>
+            </div>
+            <div class="stake-card">
+              <div id="profileAvgScore" class="stake-amount">R0</div>
+              <div class="stake-reward">Avg score</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Game history</h3>
+          <div id="profileHistory">
+            <p>No game history available.</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn" data-action="hideProfileModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Stake modal -->
+  <div class="modal" id="stakeModal" role="dialog" aria-modal="true" aria-labelledby="stakeTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="stakeTitle">💰 Select your stake</span>
+        <button class="close-modal" data-action="hideStakeModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <p>Answer all 10 questions correctly to double your money.</p>
+        <div id="stakeOptions" class="stake-grid" role="radiogroup" aria-label="Stake options">
+          <!-- populated dynamically -->
+        </div>
+
+        <div class="section">
+          <h3>Challenge rules</h3>
+          <ul>
+            <li><strong>10 questions</strong></li>
+            <li><strong>One strike:</strong> one wrong answer ends the game</li>
+            <li><strong>All or nothing:</strong> perfect run to double your stake</li>
+            <li><strong>No hints:</strong> live mode only</li>
+            <li><strong>20s per question</strong></li>
+            <li><strong>No repeats</strong> in the same game</li>
+          </ul>
+          <p><strong>Example:</strong> Stake R10 → Win R20 extra (Total: R30)</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:6px">
+        <button class="btn" data-action="startLiveGame">Start game</button>
+        <button class="btn btn-danger" data-action="hideStakeModal">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Referral modal -->
+  <div class="modal" id="referralModal" role="dialog" aria-modal="true" aria-labelledby="referralTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="referralTitle">🎁 Referral rewards</span>
+        <button class="close-modal" data-action="hideReferralModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <p>Share your referral code and earn <strong>R1</strong> per friend who signs up and plays.</p>
+
+        <div class="section">
+          <h3>Your referral code</h3>
+          <div id="referralCodeDisplay" class="stake-card">TF-123456</div>
+          <button class="btn btn-secondary" data-action="copyReferralCode">Copy code</button>
+          <p style="margin-top:6px;color:var(--neutral-medium);font-size:0.85rem">Friends must deposit at least R10 for
+            the bonus to apply.</p>
+        </div>
+
+        <div class="section">
+          <h3>How it works</h3>
+          <ul>
+            <li>Share your code</li>
+            <li>They sign up using it</li>
+            <li>They deposit at least R10</li>
+            <li>You receive R1 per referral</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Your referrals</h3>
+          <div id="referralList">
+            <p>No referrals yet. Start sharing!</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Referral earnings</h3>
+          <div class="profile-stats-grid">
+            <div class="stake-card">
+              <div id="totalReferrals" class="stake-amount">0</div>
+              <div class="stake-reward">Total referrals</div>
+            </div>
+            <div class="stake-card">
+              <div id="referralEarnings" class="stake-amount">R0</div>
+              <div class="stake-reward">Total earnings</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn" data-action="hideReferralModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Transactions modal -->
+  <div class="modal" id="transactionsModal" role="dialog" aria-modal="true" aria-labelledby="transactionsTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="transactionsTitle">🧾 Transaction history</span>
+        <button class="close-modal" data-action="hideTransactionsModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <div class="profile-stats-grid">
+            <div class="stake-card">
+              <div id="totalDeposits" class="stake-amount">R0</div>
+              <div class="stake-reward">Deposits</div>
+            </div>
+            <div class="stake-card">
+              <div id="totalWithdrawals" class="stake-amount">R0</div>
+              <div class="stake-reward">Withdrawals</div>
+            </div>
+            <div class="stake-card">
+              <div id="netAmount" class="stake-amount">R0</div>
+              <div class="stake-reward">Net</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Recent transactions</h3>
+          <div id="transactionsList">
+            <p>No transactions yet.</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn" data-action="hideTransactionsModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Terms modal -->
+  <div class="modal" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="termsTitle">📄 Terms of service</span>
+        <button class="close-modal" data-action="hideTermsModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="section">
+          <h3>1. Acceptance of terms</h3>
+          <p>By using this skill-based IQ game, you agree to these terms and conditions.</p>
+        </div>
+        <div class="section">
+          <h3>2. Use license</h3>
+          <p>Permission is granted to use this game for personal, non-commercial purposes.</p>
+        </div>
+        <div class="section">
+          <h3>3. Disclaimer</h3>
+          <p>This game is provided "as is" without warranties of any kind.</p>
+        </div>
+        <div class="section">
+          <h3>4. Limitations</h3>
+          <p>We aren't liable for damages arising from use or inability to use the service.</p>
+        </div>
+        <div class="section">
+          <h3>5. Accuracy</h3>
+          <p>Content may include errors; we don't guarantee completeness or accuracy.</p>
+        </div>
+        <div class="section">
+          <h3>6. Links</h3>
+          <p>Linked sites aren't reviewed or endorsed by us; use at your own risk.</p>
+        </div>
+        <div class="section">
+          <h3>7. Modifications</h3>
+          <p>Terms may change without notice; continued use means acceptance.</p>
+        </div>
+        <div class="section">
+          <h3>8. Governing law</h3>
+          <p>Governed by South African law; courts in South Africa have exclusive jurisdiction.</p>
+        </div>
+      </div>
+      <button class="btn" data-action="hideTermsModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Privacy modal -->
+  <div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="privacyTitle">🔒 Privacy policy</span>
+        <button class="close-modal" data-action="hidePrivacyModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="section">
+          <h3>1. Information we collect</h3>
+          <ul>
+            <li>Account details</li>
+            <li>Gameplay performance</li>
+            <li>Transaction history</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>2. How we use it</h3>
+          <ul>
+            <li>Provide and improve services</li>
+            <li>Process transactions</li>
+            <li>Support and notifications</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>3. Sharing</h3>
+          <p>No sale of personal data. Limited sharing per policy and law.</p>
+        </div>
+        <div class="section">
+          <h3>4. Security</h3>
+          <p>Reasonable measures to protect your information.</p>
+        </div>
+        <div class="section">
+          <h3>5. Retention</h3>
+          <p>Data retained as necessary for service and legal compliance.</p>
+        </div>
+        <div class="section">
+          <h3>6. Your rights</h3>
+          <p>Access, correct, delete, or restrict processing where applicable.</p>
+        </div>
+        <div class="section">
+          <h3>7. Changes</h3>
+          <p>We'll update the policy as needed; check the latest version.</p>
+        </div>
+        <div class="section">
+          <h3>8. Contact</h3>
+          <p>Questions? Email <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+              data-cfemail="bececcd7c8dfddc7fecad6d7d0d5d8dfcdca90dbc6dfd3ced2db">[email&#160;protected]</a></p>
+        </div>
+      </div>
+      <button class="btn" data-action="hidePrivacyModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* State */
+      const appState = {
+        user: { current: null, isLoggedIn: false },
+        game: {
+          stake: 0,
+          totalQuestions: 0,
+          correctAnswers: 0,
+          wrongAnswers: 0,
+          streak: 0,
+          timer: 15, // Default to 15s
+          difficulty: 'Easy',
+          sessionId: '',
+          usedQuestions: {},
+          currentQuestionData: null,
+          category: ''
+        },
+        ui: { isLoading: false, currentScreen: 'home' },
+        analytics: { events: [], sessionStart: Date.now() },
+        inactivity: { lastAction: Date.now(), timeout: 10 * 60 * 1000 } // 10 minutes
+      };
+
+      /* Helpers */
+      const el = (id) => document.getElementById(id);
+      const show = (node) => node && (node.style.display = 'block');
+      const hide = (node) => node && (node.style.display = 'none');
+
+      /* Loading screen progress */
+      function simulateLoadingProgress() {
+        const bar = el('loadingBar');
+        if (!bar) return;
+        let p = 0;
+        const int = setInterval(() => {
+          p += Math.random() * 20;
+          if (p >= 100) {
+            p = 100;
+            clearInterval(int);
+            setTimeout(() => {
+              const ls = el('loadingScreen');
+              if (ls) ls.style.opacity = '0';
+              setTimeout(() => hide(ls), 300);
+            }, 300);
+          }
+          bar.style.width = p + '%';
+        }, 200);
+      }
+
+      /* Overlay loader */
+      const loadingOverlay = {
+        show(message = 'Loading...') {
+          const overlay = el('loadingOverlay');
+          const text = el('loadingOverlayText');
+          if (text) text.textContent = message;
+          if (overlay) overlay.style.display = 'grid';
+          appState.ui.isLoading = true;
+          document.body.style.overflow = '';
+        },
+        hide() {
+          const overlay = el('loadingOverlay');
+          if (overlay) overlay.style.display = 'none';
+          appState.ui.isLoading = false;
+          document.body.style.overflow = '';
+        }
+      };
+
+      /* Storage */
+      function persistAppState() {
+        // App state is no longer persisted in local storage. Migrated to Database.
+      }
+
+      // Unified user update function — strips sensitive data before persisting
+      function updateUserInStorage(userData) {
+        try {
+          // Never persist plaintext password to currentUser
+          const safeUser = { ...userData };
+          delete safeUser.password;
+
+          appState.user.current = safeUser;
+          localStorage.setItem('currentUser', JSON.stringify(safeUser));
+
+          updateBalance();
+        } catch (error) {
+          console.error('Error updating user in storage:', error);
+        }
+      }
+
+      function recordTransaction(userData) {
+        // Handled by backend endpoint.
+      }
+
+      function addTransaction(type, amount, description) {
+        // Handled directly via SQL inside the API.
+      }
+
+      function showGameContent() {
+        hide(el('loginScreen'));
+        const gc = el('gameContent');
+        show(gc);
+        gc.classList.add('view-transition');
+        appState.ui.currentScreen = 'dashboard';
+        fetchLiveStats();
+      }
+
+      function showLoginScreen() {
+        hide(el('gameContent'));
+        const ls = el('loginScreen');
+        show(ls);
+        ls.classList.add('view-transition');
+        appState.user.isLoggedIn = false;
+        appState.user.current = null;
+      }
+
+      function loadSaved() {
+        try {
+          const currentStr = localStorage.getItem('currentUser');
+          if (!currentStr) {
+            showLoginScreen();
+            return;
+          }
+
+          const currentUser = JSON.parse(currentStr);
+          if (currentUser && currentUser.email) {
+            appState.user.current = currentUser;
+            appState.user.isLoggedIn = true;
+            updateMenuAuth();
+            updateDashboardGreeting();
+            fetchLiveStats();
+            startInactivityTimer();
+            showGameContent();
+          } else {
+            showLoginScreen();
+          }
+        } catch (e) {
+          appState.user.current = null;
+          appState.user.isLoggedIn = false;
+          showLoginScreen();
+        }
+      }
+
+      /* Sound Manager - Synthesized Web Audio */
+      const SoundManager = {
+        ctx: null,
+        init() {
+          if (this.ctx) return;
+          this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+        },
+        play(type) {
+          try {
+            this.init();
+            if (this.ctx.state === 'suspended') this.ctx.resume();
+
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+
+            const now = this.ctx.currentTime;
+
+            if (type === 'correct') {
+              osc.type = 'sine';
+              osc.frequency.setValueAtTime(523.25, now); // C5
+              osc.frequency.exponentialRampToValueAtTime(880, now + 0.1); // A5
+              gain.gain.setValueAtTime(0.1, now);
+              gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+              osc.start(now);
+              osc.stop(now + 0.3);
+            } else if (type === 'wrong') {
+              osc.type = 'square';
+              osc.frequency.setValueAtTime(220, now); // A3
+              osc.frequency.linearRampToValueAtTime(110, now + 0.2); // A2
+              gain.gain.setValueAtTime(0.05, now);
+              gain.gain.linearRampToValueAtTime(0.01, now + 0.2);
+              osc.start(now);
+              osc.stop(now + 0.2);
+            } else if (type === 'tick') {
+              osc.type = 'sine';
+              osc.frequency.setValueAtTime(150, now);
+              gain.gain.setValueAtTime(0.02, now);
+              gain.gain.linearRampToValueAtTime(0.001, now + 0.05);
+              osc.start(now);
+              osc.stop(now + 0.05);
+            } else if (type === 'click') {
+              osc.type = 'sine';
+              osc.frequency.setValueAtTime(800, now);
+              gain.gain.setValueAtTime(0.02, now);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+              osc.start(now);
+              osc.stop(now + 0.1);
+            }
+          } catch (e) {
+            console.warn('Audio play failed:', e);
+          }
+        }
+      };
+
+      // Sound Manager - Synthesized Web Audio
+
+      /* Menu */
+      const menuBtn = el('menuButton');
+      const menuDropdown = el('menuDropdown');
+      function toggleMenu() {
+        if (!menuDropdown) return;
+        const active = menuDropdown.classList.toggle('active');
+        if (menuBtn) menuBtn.setAttribute('aria-expanded', String(active));
+      }
+      function closeMenu() {
+        if (!menuDropdown) return;
+        menuDropdown.classList.remove('active');
+        if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+      }
+      document.addEventListener('click', (e) => {
+        if (!menuBtn?.contains(e.target) && !menuDropdown?.contains(e.target)) closeMenu();
+      });
+      if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+
+      function updateMenuAuth() {
+        const t = el('loginLogoutText');
+        if (t) t.textContent = appState.user.isLoggedIn ? '🚪 Logout' : '🚪 Login';
+      }
+
+      /* Screens */
+      function showLoginScreen() {
+        show(el('loginScreen'));
+        hide(el('gameContent'));
+        hide(el('balanceDisplay'));
+        appState.ui.currentScreen = 'login';
+        persistAppState();
+      }
+      function showGameContent() {
+        hide(el('loginScreen'));
+        show(el('gameContent'));
+        if (appState.user.current) {
+          const bd = el('balanceDisplay');
+          if (bd) bd.style.display = 'flex';
+          updateBalance();
+        }
+        appState.ui.currentScreen = 'game';
+        persistAppState();
+      }
+
+      /* Balance */
+      // Dashboard Greeting
+      function updateDashboardGreeting() {
+        const nameEl = el('welcomeName');
+        const avatarEl = el('headerAvatar');
+        if (appState.user.current && nameEl) {
+          nameEl.textContent = appState.user.current.first_name || 'Player';
+          if (avatarEl) avatarEl.textContent = (appState.user.current.first_name || 'P')[0].toUpperCase();
+
+          // Sync referral code display
+          const refEl = el('referralCodeDisplay');
+          if (refEl && appState.user.current.referral_code) {
+            refEl.textContent = appState.user.current.referral_code;
+          }
+        }
+      }
+
+      // Fetch Live Stats from Backend
+      async function fetchLiveStats() {
+        try {
+          const response = await fetch('get_live_stats.php');
+          const data = await response.json();
+          if (data.success && data.stats) {
+            if (el('statsPaidToday')) el('statsPaidToday').textContent = 'R' + data.stats.total_payout_today.toLocaleString();
+            if (el('statsActiveNow')) el('statsActiveNow').textContent = data.stats.active_players.toLocaleString() + '+';
+            if (el('statsTopWinner')) el('statsTopWinner').textContent = 'R' + data.stats.top_winner_today.toLocaleString();
+          }
+        } catch (error) {
+          console.error('Error fetching live stats:', error);
+        }
+      }
+
+      // Inactivity Timer
+      function startInactivityTimer() {
+        document.addEventListener('mousemove', resetInactivity);
+        document.addEventListener('keydown', resetInactivity);
+        document.addEventListener('click', resetInactivity);
+        document.addEventListener('touchstart', resetInactivity);
+
+        setInterval(() => {
+          if (appState.user.isLoggedIn && Date.now() - appState.inactivity.lastAction > appState.inactivity.timeout) {
+            handleLogout();
+            showToast('Session timed out due to inactivity.', 'info');
+          }
+        }, 10000);
+      }
+
+      function resetInactivity() {
+        appState.inactivity.lastAction = Date.now();
+      }
+
+      function updateBalance() {
+        const b = el('balanceAmount');
+        const user = appState.user.current;
+        if (b && user) {
+          const bal = user.balance ?? 0;
+          b.textContent = 'R ' + bal.toLocaleString();
+
+          // Sync Dashboard Wallet Snapshot
+          const wsBal = el('wsBalance');
+          const wsEarn = el('wsEarnings');
+          if (wsBal) wsBal.textContent = 'R ' + bal.toLocaleString();
+          if (wsEarn) wsEarn.textContent = 'Total Earnings: R ' + (user.totalWinnings ?? 0).toLocaleString();
+        }
+      }
+
+      function showBattlesTeaser() {
+        showToast('⚔️ Live Battles are coming soon! Stay tuned.', 'info');
+      }
+
+      function showAllCategories() {
+        const grid = document.querySelector('.categories-grid');
+        const btn = document.querySelector('.view-all');
+        if (grid) {
+          grid.classList.toggle('expanded');
+          if (btn) {
+            btn.textContent = grid.classList.contains('expanded') ? 'Show Less' : 'View All';
+          }
+        }
+      }
+
+      function selectCategory(cat) {
+        appState.game.category = cat;
+        showToast(`Selected Category: ${cat}`, 'success');
+        showStakeModal();
+      }
+
+      function startChallenge(type) {
+        if (!appState.user.isLoggedIn) return showAuthModal();
+
+        if (type === 'daily') {
+          appState.game.stake = 50;
+          appState.game.mode = 'challenge';
+          showToast('Daily Cash Challenge: R50 Stake Set', 'info');
+        } else if (type === 'friday') {
+          appState.game.stake = 100;
+          appState.game.mode = 'challenge';
+          showToast('Friday Night Challenge: R100 Stake Set', 'info');
+        }
+
+        startLiveGame();
+      }
+
+      function showBattlesTeaser() {
+        if (!appState.user.isLoggedIn) return showAuthModal();
+        showStakeModal('pvp'); // Pass mode to stake modal
+      }
+
+      async function showMatchmaking() {
+        hide(el('liveStartScreen'));
+        hide(el('liveEndScreen'));
+        show(el('matchmakingScreen'));
+
+        const opponents = ['SpeedyQuizzer', 'Brainiac_SA', 'LogicLord', 'EliteThinker', 'QuizMaster_X'];
+        const opponent = opponents[Math.floor(Math.random() * opponents.length)];
+
+        el('matchUserName').textContent = appState.user.current.first_name || 'You';
+        el('matchOpponentName').textContent = '...';
+        el('matchOpponentAvatar').textContent = '?';
+
+        let wait = 3;
+        const interval = setInterval(() => {
+          wait--;
+          el('matchWaitTime').textContent = wait + 's';
+          if (wait === 1) {
+            el('matchOpponentName').textContent = opponent;
+            el('matchOpponentAvatar').textContent = '👤';
+            el('matchOpponentAvatar').style.background = 'var(--accent)';
+          }
+          if (wait <= 0) {
+            clearInterval(interval);
+            setTimeout(() => {
+              hide(el('matchmakingScreen'));
+              startLiveGameActual();
+            }, 800);
+          }
+        }, 1000);
+      }
+
+      /* Auth */
+      function switchAuthTab(tab) {
+        // Scope tab switching to auth modal only
+        const authModal = el('authModal');
+        if (authModal) {
+          authModal.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+          const currentTab = authModal.querySelector(`.tab[data-args="${tab}"]`);
+          if (currentTab) currentTab.classList.add('active');
+        }
+
+        hide(el('loginForm'));
+        hide(el('registerForm'));
+        show(el(tab + 'Form'));
+      }
+      function showAuthModal() { show(el('authModal')) }
+      function hideAuthModal() { hide(el('authModal')) }
+
+      // processReferral logic moved to backend in user_auth.php      
+      async function login() {
+        const email = el('loginEmail').value.trim();
+        const password = el('loginPassword').value.trim();
+
+        if (!email || !password) {
+          alert('Please enter both email and password');
+          return;
+        }
+
+        loadingOverlay.show('Logging in...');
+        try {
+          const res = await fetch('user_auth.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ action: 'login', email, password })
+          });
+          const data = await res.json();
+          if (data.success) {
+            appState.user.current = data.user;
+            appState.user.isLoggedIn = true;
+            localStorage.setItem('currentUser', JSON.stringify(data.user));
+            updateMenuAuth();
+            showGameContent();
+            hideAuthModal();
+            showAlert('Login successful!', 'success');
+          } else {
+            showAlert(data.error || 'Invalid email or password', 'error');
+          }
+        } catch (e) {
+          showAlert('Login failed. Please try again.', 'error');
+        } finally {
+          loadingOverlay.hide();
+        }
+      }
+
+      async function register() {
+        const email = el('registerEmail').value.trim();
+        const firstName = el('registerFirstName').value.trim();
+        const lastName = el('registerLastName').value.trim();
+        const cellphone = el('registerCellphone').value.trim();
+        const password = el('registerPassword').value;
+        const confirmPassword = el('confirmPassword').value;
+        const referralCode = el('referralCode').value.trim();
+
+        // Basic validation
+        if (!email || !firstName || !lastName || !cellphone || !password) {
+          alert('Please fill in all required fields');
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert('Passwords do not match');
+          return;
+        }
+
+        if (password.length < 6) {
+          alert('Password must be at least 6 characters');
+          return;
+        }
+
+        loadingOverlay.show('Creating your account...');
+        try {
+          const res = await fetch('user_auth.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'register',
+              email,
+              password,
+              first_name: firstName,
+              last_name: lastName,
+              cellphone,
+              referred_by: referralCode
+            })
+          });
+          const data = await res.json();
+          if (data.success) {
+            appState.user.current = data.user;
+            appState.user.isLoggedIn = true;
+            localStorage.setItem('currentUser', JSON.stringify(data.user));
+            updateMenuAuth();
+            showGameContent();
+            hideAuthModal();
+            showAlert(data.message || 'Registration successful! R10 bonus added to your account.', 'success');
+          } else {
+            showAlert(data.error || 'Registration failed.', 'error');
+          }
+        } catch (e) {
+          showAlert('Registration failed. Please try again.', 'error');
+        } finally {
+          loadingOverlay.hide();
+        }
+      }
+
+      function logout() {
+        if (!confirm('Are you sure you want to logout?')) return;
+        appState.user.current = null;
+        appState.user.isLoggedIn = false;
+        try { localStorage.removeItem('currentUser'); persistAppState() } catch { }
+        updateMenuAuth();
+        showLoginScreen();
+        alert('You have been logged out.');
+      }
+      function handleLoginLogout() {
+        if (appState.user.isLoggedIn) logout(); else showAuthModal();
+      }
+
+      /* Validation */
+      const patterns = {
+        email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        phone: /^[+]?[\d\s-]{7,16}$/
+      };
+      function showFieldError(input, message) {
+        const err = input.parentNode.querySelector('.form-error');
+        if (!err) return;
+        err.textContent = message;
+        err.style.display = 'block';
+        input.classList.add('input-error');
+      }
+      function hideFieldError(input) {
+        const err = input.parentNode.querySelector('.form-error');
+        if (!err) return;
+        err.style.display = 'none';
+        input.classList.remove('input-error');
+      }
+      document.querySelectorAll('input[type="email"]').forEach(i => {
+        i.addEventListener('blur', () => {
+          if (i.value && !patterns.email.test(i.value)) showFieldError(i, 'Please enter a valid email.');
+          else hideFieldError(i);
+        });
+      });
+      document.querySelectorAll('input[type="password"]').forEach(i => {
+        i.addEventListener('blur', () => {
+          if (i.value && i.value.length < 6) showFieldError(i, 'Minimum 6 characters.');
+          else hideFieldError(i);
+        });
+      });
+      document.querySelectorAll('input[type="tel"]').forEach(i => {
+        i.addEventListener('blur', () => {
+          if (i.value && !patterns.phone.test(i.value)) showFieldError(i, 'Please enter a valid phone number.');
+          else hideFieldError(i);
+        });
+      });
+
+      /* Alerts — fixed-position toast notifications */
+      function showAlert(message, type = 'info', duration = 3000) {
+        const div = document.createElement('div');
+        div.className = `toast-notification toast-${type}`;
+        div.textContent = message;
+        div.style.opacity = '0';
+        div.style.transform = 'translateX(-50%) translateY(-10px)';
+        document.body.appendChild(div);
+        // Trigger reflow for animation
+        requestAnimationFrame(() => {
+          div.style.opacity = '1';
+          div.style.transform = 'translateX(-50%) translateY(0)';
+        });
+        if (duration > 0) {
+          setTimeout(() => {
+            div.style.opacity = '0';
+            div.style.transform = 'translateX(-50%) translateY(-10px)';
+            setTimeout(() => div.remove(), 300);
+          }, duration);
+        }
+        return div;
+      }
+
+      /* Banking */
+      function hideBankModal() { hide(el('bankModal')) }
+      function showBankModal(tab) {
+        if (!appState.user.isLoggedIn) return alert('Please log in to access banking.');
+        show(el('bankModal'));
+        switchBankTab(tab);
+        // FIX 4: Initialize payment method display on modal open
+        togglePaymentMethod();
+        // FIX 5: Generate dynamic EFT reference
+        generateEFTReference();
+      }
+
+      function generateEFTReference() {
+        const user = appState.user.current;
+        if (user) {
+          const ref = user.referralCode || 'TF-' + Math.random().toString(36).substr(2, 8).toUpperCase();
+          const eftRefEl = el('eftReference');
+          if (eftRefEl) eftRefEl.textContent = ref;
+        }
+      }
+
+      function switchBankTab(tab) {
+        document.querySelectorAll('#bankModal .tab').forEach(t => t.classList.remove('active'));
+        const tabEl = document.querySelector(`#bankModal .tab[data-args="${tab}"]`);
+        if (tabEl) tabEl.classList.add('active');
+        hide(el('depositForm'));
+        hide(el('withdrawForm'));
+        if (tab === 'deposit') {
+          show(el('depositForm'));
+          // FIX 4: Initialize payment method display
+          togglePaymentMethod();
+        }
+        else show(el('withdrawForm'));
+      }
+
+      // FIX 2: Added payment method toggle
+      function togglePaymentMethod() {
+        const cardDetails = el('cardDetails');
+        const eftDetails = el('eftDetails');
+        const selectedMethod = document.querySelector('input[name="paymentMethod"]:checked');
+
+        if (selectedMethod && selectedMethod.value === 'card') {
+          show(cardDetails);
+          hide(eftDetails);
+        } else {
+          hide(cardDetails);
+          show(eftDetails);
+        }
+      }
+
+      // FIX 3: Enhanced card number formatting
+      function formatCardNumber(input) {
+        // Remove all non-digit characters
+        let value = input.value.replace(/\D/g, '');
+
+        // Limit to 16 digits
+        if (value.length > 16) {
+          value = value.substring(0, 16);
+        }
+
+        // Add space after every 4 digits
+        value = value.replace(/(.{4})/g, '$1 ').trim();
+
+        input.value = value;
+      }
+
+      async function processDeposit() {
+        const amount = parseInt(el('depositAmount')?.value, 10) || 0;
+        if (amount < 10) {
+          showAlert('Minimum deposit amount is R10', 'error');
+          return;
+        }
+        if (!appState.user.current || !appState.user.current.id) {
+          showAlert('Please log in to make a deposit', 'error');
+          return;
+        }
+
+        // Validate card details if card payment selected
+        const method = document.querySelector('input[name="paymentMethod"]:checked')?.value || 'card';
+        const cardDetails = {};
+        if (method === 'card') {
+          cardDetails.cardNumber = el('cardNumber')?.value.replace(/\s/g, '') || '';
+          cardDetails.expiryDate = el('expiryDate')?.value || '';
+          cardDetails.cvv = el('cvv')?.value || '';
+          cardDetails.cardHolder = el('cardHolder')?.value.trim() || '';
+
+          let valid = true;
+          if (!/^\d{13,19}$/.test(cardDetails.cardNumber)) {
+            showFieldError(el('cardNumber'), 'Enter a valid card number');
+            valid = false;
+          }
+          if (!/^\d{2}\/\d{2}$/.test(cardDetails.expiryDate)) {
+            showFieldError(el('expiryDate'), 'Format: MM/YY');
+            valid = false;
+          }
+          if (!/^\d{3,4}$/.test(cardDetails.cvv)) {
+            showFieldError(el('cvv'), 'Enter 3-4 digit CVV');
+            valid = false;
+          }
+          if (!cardDetails.cardHolder) {
+            showFieldError(el('cardHolder'), 'Card holder name required');
+            valid = false;
+          }
+          if (!valid) return;
+        }
+
+        loadingOverlay.show('Processing deposit...');
+        try {
+          const res = await fetch('process_payment.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'deposit',
+              user_id: appState.user.current.id,
+              amount: amount,
+              payment_method: method,
+              card_details: cardDetails
+            })
+          });
+          const data = await res.json();
+          if (data.success) {
+            // Update local state
+            appState.user.current.balance = Number(data.new_balance);
+            updateUserInStorage(appState.user.current);
+            addTransaction('deposit', amount, `Deposit via ${method}`);
+
+            hideBankModal();
+            showAlert(data.message || `Successfully deposited R${amount}!`, 'success');
+          } else {
+            showAlert(data.error || 'Deposit failed.', 'error');
+          }
+        } catch (e) {
+          showAlert('Deposit failed due to a network error.', 'error');
+        } finally {
+          loadingOverlay.hide();
+        }
+      }
+
+      async function processWithdrawal() {
+        const amount = parseInt(el('withdrawAmount')?.value, 10) || 0;
+        if (amount < 50) {
+          showAlert('Minimum withdrawal amount is R50', 'error');
+          return;
+        }
+        if (!appState.user.current || !appState.user.current.id) {
+          showAlert('Please log in to make a withdrawal', 'error');
+          return;
+        }
+        if ((appState.user.current.balance || 0) < amount) {
+          showAlert('Insufficient balance for this withdrawal', 'error');
+          return;
+        }
+
+        // Validate bank details
+        const bankDetails = {};
+        bankDetails.bankName = el('bankName')?.value || '';
+        bankDetails.accountHolder = el('accountHolder')?.value.trim() || '';
+        bankDetails.accountNumber = el('accountNumber')?.value.trim() || '';
+        bankDetails.accountType = el('accountType')?.value || '';
+        bankDetails.branchCode = el('branchCode')?.value.trim() || '';
+
+        let valid = true;
+        if (!bankDetails.bankName) { showFieldError(el('bankName'), 'Select a bank'); valid = false; }
+        if (!bankDetails.accountHolder) { showFieldError(el('accountHolder'), 'Account holder required'); valid = false; }
+        if (!bankDetails.accountNumber || !/^\d{5,}$/.test(bankDetails.accountNumber)) { showFieldError(el('accountNumber'), 'Valid account number required'); valid = false; }
+        if (!bankDetails.accountType) { showFieldError(el('accountType'), 'Select account type'); valid = false; }
+        if (!bankDetails.branchCode || !/^\d{4,}$/.test(bankDetails.branchCode)) { showFieldError(el('branchCode'), 'Valid branch code required'); valid = false; }
+        if (!valid) return;
+
+        loadingOverlay.show('Processing withdrawal...');
+        try {
+          const res = await fetch('process_payment.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'withdraw',
+              user_id: appState.user.current.id,
+              amount: amount,
+              bank_details: bankDetails
+            })
+          });
+          const data = await res.json();
+          if (data.success) {
+            // Update local state
+            appState.user.current.balance = Number(data.new_balance);
+            updateUserInStorage(appState.user.current);
+            addTransaction('withdrawal', amount, `Withdrawal to ${bankDetails.bankName}`);
+
+            hideBankModal();
+            showAlert(data.message || `Withdrawal request for R${amount} submitted!`, 'success');
+          } else {
+            showAlert(data.error || 'Withdrawal failed.', 'error');
+          }
+        } catch (e) {
+          showAlert('Withdrawal failed due to a network error.', 'error');
+        } finally {
+          loadingOverlay.hide();
+        }
+      }
+
+      /* Referral */
+      function showReferralModal() {
+        if (!appState.user.isLoggedIn) return alert('Please log in to view referrals.');
+
+        const user = appState.user.current;
+        if (user.referralCode) {
+          el('referralCodeDisplay').textContent = user.referralCode;
+        }
+        if (user.referralCount) {
+          el('totalReferrals').textContent = user.referralCount;
+        }
+        if (user.referralEarnings) {
+          el('referralEarnings').textContent = 'R' + user.referralEarnings;
+        }
+
+        show(el('referralModal'));
+      }
+      function copyReferralCode() {
+        const code = el('referralCodeDisplay')?.textContent || '';
+        navigator.clipboard.writeText(code).then(() => alert('Referral code copied!')).catch(() => { });
+      }
+      function hideReferralModal() { hide(el('referralModal')) }
+
+      /* Transactions */
+      async function showTransactionsModal() {
+        if (!appState.user.isLoggedIn) return alert('Please log in to view transactions.');
+
+        show(el('transactionsModal'));
+        const listEl = el('transactionsList');
+        listEl.innerHTML = '<p>Loading transactions...</p>';
+
+        try {
+          const res = await fetch('process_payment.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'get_transaction_history',
+              user_id: appState.user.current.id
+            })
+          });
+          const data = await res.json();
+
+          if (data.success && data.transactions.length > 0) {
+            let totalDep = 0, totalWith = 0;
+            listEl.innerHTML = data.transactions.map(tx => {
+              const amt = parseFloat(tx.amount);
+              // Normalize tx types for totals
+              if (tx.type === 'deposit' || tx.type === 'bonus' || (tx.type === 'game' && amt > 0)) totalDep += amt;
+              if (tx.type === 'withdrawal' || tx.type === 'stake' || (tx.type === 'game' && amt < 0)) totalWith += Math.abs(amt);
+
+              const icon = tx.type === 'deposit' ? '💳' : tx.type === 'withdrawal' ? '💸' : (tx.type === 'game' && amt > 0) ? '🏆' : (tx.type === 'game' && amt < 0) ? '🎮' : '🎁';
+              const color = (tx.type === 'withdrawal' || tx.type === 'stake' || (tx.type === 'game' && amt < 0)) ? 'var(--danger)' : 'var(--success)';
+
+              return `<div class="stake-card" style="margin-bottom:4px">
+                <div class="stake-amount" style="font-size:0.85rem">${icon} ${tx.description}</div>
+                <div class="stake-reward"><span style="color:${color};font-weight:600">R${Math.abs(amt)}</span> • ${tx.date}</div>
+              </div>`;
+            }).join('');
+
+            el('totalDeposits').textContent = 'R' + totalDep.toFixed(2);
+            el('totalWithdrawals').textContent = 'R' + totalWith.toFixed(2);
+            el('netAmount').textContent = 'R' + (totalDep - totalWith).toFixed(2);
+          } else {
+            listEl.innerHTML = '<p>No transactions yet.</p>';
+            el('totalDeposits').textContent = 'R0.00';
+            el('totalWithdrawals').textContent = 'R0.00';
+            el('netAmount').textContent = 'R0.00';
+          }
+        } catch (e) {
+          listEl.innerHTML = '<p class="text-danger">Failed to load transactions.</p>';
+        }
+      }
+      function hideTransactionsModal() { hide(el('transactionsModal')) }
+
+      /* Terms & privacy */
+      function showTermsModal() { show(el('termsModal')) }
+      function hideTermsModal() { hide(el('termsModal')) }
+      function showPrivacyModal() { show(el('privacyModal')) }
+      function hidePrivacyModal() { hide(el('privacyModal')) }
+
+      /* About & support */
+      function showAboutModal() {
+        show(el('aboutModal'));
+        el('aboutModal').classList.add('view-transition');
+      }
+      function hideAboutModal() { hide(el('aboutModal')) }
+      function showSupportModal() { show(el('supportModal')) }
+      function hideSupportModal() { hide(el('supportModal')) }
+      async function submitSupportRequest() {
+        const name = el('supportName'), email = el('supportEmail'), cat = el('supportCategory'), msg = el('supportMessage');
+        let ok = true;
+        if (!name.value.trim()) { showFieldError(name, 'Name is required'); ok = false }
+        if (!patterns.email.test(email.value.trim())) { showFieldError(email, 'Valid email required'); ok = false }
+        if (!cat.value) { showFieldError(cat, 'Please select a category'); ok = false }
+        if (!msg.value.trim()) { showFieldError(msg, 'Message is required'); ok = false }
+        if (!ok) return;
+
+        const alertEl = el('supportAlert');
+        alertEl.className = 'alert-message alert-info';
+        alertEl.textContent = 'Sending your message...';
+        alertEl.style.display = 'block';
+
+        try {
+          const res = await fetch('api/interactions.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'submit_support',
+              name: name.value.trim(),
+              email: email.value.trim(),
+              category: cat.value,
+              message: msg.value.trim()
+            })
+          });
+          const data = await res.json();
+          if (data.success) {
+            alertEl.className = 'alert-message alert-success';
+            alertEl.textContent = data.message;
+            setTimeout(() => { hideSupportModal(); alertEl.style.display = 'none'; }, 2000);
+          } else {
+            alertEl.className = 'alert-message alert-error';
+            alertEl.textContent = data.error || 'Failed to send message.';
+          }
+        } catch (e) {
+          alertEl.className = 'alert-message alert-error';
+          alertEl.textContent = 'Network error. Please try again.';
+        }
+      }
+
+      function showProfileModal() {
+        if (!appState.user.isLoggedIn) return alert('Please log in to view your profile.');
+
+        const user = appState.user.current;
+        el('profileUsername').textContent = user.username || '—';
+        el('profileBalance').textContent = 'R' + (user.balance || 0);
+        el('profileGamesPlayed').textContent = user.gamesPlayed || 0;
+        el('profileTotalWinnings').textContent = 'R' + (user.totalWinnings || 0);
+        el('profileCorrectAnswers').textContent = user.correctAnswers || 0;
+        el('profileWrongAnswers').textContent = user.wrongAnswers || 0;
+        el('profileBestStreak').textContent = user.bestStreak || 0;
+        el('profileAvgScore').textContent = 'R' + (user.avgScore || 0);
+
+        // Show game history
+        const historyEl = el('profileHistory');
+        if (user.gameHistory && user.gameHistory.length > 0) {
+          historyEl.innerHTML = user.gameHistory.map(game => `
+            <div class="stake-card">
+              <div class="stake-amount">${game.date}</div>
+              <div class="stake-reward">Score: ${game.score} | Stake: R${game.stake}</div>
+            </div>
+          `).join('');
+        } else {
+          historyEl.innerHTML = '<p>No game history available.</p>';
+        }
+
+        show(el('profileModal'));
+      }
+
+      function hideProfileModal() { hide(el('profileModal')) }
+
+      async function showLeaderboardModal(timeframe = 'allTime') {
+        if (!appState.user.isLoggedIn) return alert('Please log in to view the leaderboard.');
+
+        show(el('leaderboardModal'));
+        const leaderboardList = el('leaderboardList');
+        leaderboardList.innerHTML = '<p style="text-align:center;padding:20px">Loading ' + timeframe + ' leaderboard...</p>';
+
+        try {
+          const res = await fetch(`get_leaderboard.php?timeframe=${timeframe}`);
+          const data = await res.json();
+
+          if (data.success && data.leaderboard && data.leaderboard.length > 0) {
+            leaderboardList.innerHTML = '';
+            const medals = ['🥇', '🥈', '🥉'];
+
+            data.leaderboard.forEach((player, idx) => {
+              const div = document.createElement('div');
+              div.className = 'stake-card';
+              div.style.marginBottom = '8px';
+              div.style.display = 'flex';
+              div.style.alignItems = 'center';
+              div.style.padding = '12px';
+
+              const isFirst3 = idx < 3;
+              const medal = isFirst3 ? medals[idx] : `#${idx + 1}`;
+              const pName = player.first_name || player.username || 'Anonymous Player';
+              const payout = parseFloat(player.total_payout || 0).toFixed(2);
+
+              div.innerHTML = `
+                <div style="font-size: 1.2rem; margin-right: 15px; font-weight: bold; width: 40px; text-align: center;">${medal}</div>
+                <div style="flex: 1;">
+                  <div class="stake-amount">${pName}</div>
+                  <div class="stake-reward">${player.total_games_played} games played</div>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-weight: bold; color: var(--success);">R${payout}</div>
+                  <div style="font-size: 0.75rem; opacity: 0.7;">Total Payout</div>
+                </div>
+              `;
+              leaderboardList.appendChild(div);
+            });
+          } else {
+            leaderboardList.innerHTML = '<div style="text-align:center;padding:30px;opacity:0.6;">' +
+              '<div style="font-size:2rem;margin-bottom:10px">🏆</div>' +
+              '<p>No one has made it onto the ' + timeframe + ' leaderboard yet. Be the first!</p>' +
+              '</div>';
+          }
+        } catch (e) {
+          leaderboardList.innerHTML = '<p class="text-danger" style="text-align:center;padding:20px">Failed to load leaderboard. Please try again.</p>';
+        }
+
+        // Show current user's position (simplified for now to just show their current total)
+        const posEl = el('userLeaderboardPosition');
+        if (posEl && appState.user.current) {
+          const u = appState.user.current;
+          posEl.innerHTML = `
+            <div class="stake-card" style="border-color: var(--primary); background: rgba(99, 102, 241, 0.05);">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong>Your All-Time Winnings</strong>
+                  <div style="font-size:0.75rem; opacity:0.7;">Keep playing to climb higher!</div>
+                </div>
+                <div style="font-size: 1.1rem; font-weight: bold; color: var(--primary);">R${parseFloat(u.total_winnings || 0).toFixed(2)}</div>
+              </div>
+            </div>`;
+        }
+      }
+
+      function hideLeaderboardModal() { hide(el('leaderboardModal')) }
+      function switchLeaderboardTab(tab) {
+        document.querySelectorAll('#leaderboardModal .tab').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        const tabEl = document.querySelector(`#leaderboardModal .tab[data-args="${tab}"]`);
+        if (tabEl) {
+          tabEl.classList.add('active');
+          tabEl.setAttribute('aria-selected', 'true');
+        }
+
+        showLeaderboardModal(tab);
+      }
+
+      /* Download app */
+      function downloadApp() {
+        const a = document.createElement('a');
+        a.href = 'app-release.apk';
+        a.download = 'ThinkFast-App.apk';
+        document.body.appendChild(a); a.click(); a.remove();
+        alert('ThinkFast app download started!');
+      }
+
+      /* Gameplay */
+      const difficultyProgression = ['easy', 'medium', 'hard', 'hard', 'hard', 'hard', 'hard', 'hard', 'hard', 'hard'];
+      let users = {};
+      let liveSelectedOption = null;
+      let userRating = 0;
+      let liveTimerInterval = null;
+      let isSubmitting = false; // Prevent double-submit
+      let answerInputHandler = null; // Single event handler for answer input
+
+      async function checkLiveAuthStatus() {
+        if (!appState.user.isLoggedIn) showAuthModal();
+        else showStakeModal();
+      }
+
+      function populateStakeOptions() {
+        const cont = el('stakeOptions');
+        if (!cont) return;
+        cont.innerHTML = '';
+        const stakes = [
+          { amount: 10, win: 20 },
+          { amount: 20, win: 40 },
+          { amount: 30, win: 60 },
+          { amount: 40, win: 80 },
+          { amount: 50, win: 100 },
+          { amount: 100, win: 200 }
+        ];
+
+        stakes.forEach((stake, index) => {
+          const div = document.createElement('div');
+          div.className = 'stake-card';
+          if (index === 0) {
+            div.classList.add('selected');
+            appState.game.stake = stake.amount;
+          }
+          div.innerHTML = `
+            <div class="stake-amount">R${stake.amount}</div>
+            <div class="stake-reward">Win: R${stake.win} extra</div>
+          `;
+          div.addEventListener('click', () => {
+            document.querySelectorAll('.stake-card').forEach(s => s.classList.remove('selected'));
+            div.classList.add('selected');
+            appState.game.stake = stake.amount;
+          });
+          cont.appendChild(div);
+        });
+      }
+
+      async function showStakeModal(mode = 'normal') {
+        if (!appState.user.isLoggedIn) return showAuthModal();
+        appState.game.mode = mode;
+
+        // Ensure questions are preloaded
+        if (!window.allQuestionsCache) {
+          await preloadQuestions();
+        }
+
+        if (!window.allQuestionsCache || Object.keys(window.allQuestionsCache).length === 0) {
+          return showAlert('No questions found in the database. Please run the setup script.', 'error');
+        }
+
+        populateStakeOptions();
+        show(el('stakeModal'));
+      }
+      function hideStakeModal() { hide(el('stakeModal')) }
+
+      async function preloadQuestions() {
+        try {
+          loadingOverlay.show('Loading questions...');
+          // Fetch questions from the SQL database
+          const res = await fetch('get_questions.php');
+          if (!res.ok) throw new Error('Failed to load questions');
+          const data = await res.json();
+          window.allQuestionsCache = data.success ? data.questions : null;
+          if (!data.success) {
+            console.error('Error loading questions:', data.error);
+            showAlert('Failed to load questions from database.', 'error');
+          }
+        } catch (error) {
+          console.error('Fetch error:', error);
+          window.allQuestionsCache = null;
+          showAlert('Failed to load questions. Please check your connection.', 'error');
+        } finally {
+          loadingOverlay.hide();
+        }
+      }
+
+      async function fetchCategories() {
+        if (!window.allQuestionsCache) await preloadQuestions();
+        return window.allQuestionsCache ? Object.keys(window.allQuestionsCache) : ['general', 'math', 'science', 'geography', 'history', 'entertainment'];
+      }
+
+      async function fetchRandomQuestion(category, difficulty, usedIds) {
+        const cache = window.allQuestionsCache;
+        if (!cache) return null;
+        if (cache[category] && cache[category][difficulty]) {
+          const pool = cache[category][difficulty].filter(q => !usedIds.includes(String(q.id)));
+          if (pool.length) return pool[Math.floor(Math.random() * pool.length)];
+        }
+        // fallback: any available
+        let all = [];
+        Object.keys(cache).forEach(cat => {
+          Object.keys(cache[cat]).forEach(diff => {
+            all = all.concat(cache[cat][diff].filter(q => !usedIds.includes(String(q.id))));
+          });
+        });
+        if (!all.length) return null;
+        return all[Math.floor(Math.random() * all.length)];
+      }
+
+      function initializeStreakCounter() {
+        const sc = el('streakCounter');
+        if (!sc) return;
+        sc.innerHTML = '';
+        for (let i = 1; i <= 10; i++) {
+          const d = document.createElement('div');
+          d.className = 'streak-item';
+          d.textContent = i;
+          sc.appendChild(d);
+        }
+      }
+
+      function updateStreakCounter() {
+        document.querySelectorAll('.streak-item').forEach((it, idx) => {
+          if (idx < appState.game.correctAnswers) it.className = 'streak-item active';
+          else if (idx === appState.game.correctAnswers && appState.game.wrongAnswers > 0) it.className = 'streak-item wrong';
+          else it.className = 'streak-item';
+        });
+      }
+
+      // FIX 3: Restructured game start to verify questions first
+      async function fetchRecentActivity() {
+        try {
+          const res = await fetch('api/get_recent_activity.php');
+          const data = await res.json();
+          if (data.success) {
+            updateActivityTicker(data.activity);
+          }
+        } catch (e) {
+          console.error('Ticker error:', e);
+        }
+      }
+
+      function updateActivityTicker(activity) {
+        const container = el('liveActivityTicker');
+        if (!container) return;
+
+        container.innerHTML = '';
+        activity.forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'ticker-item poppins';
+
+          if (item.type === 'win') {
+            div.innerHTML = `🏆 <strong>${item.user}</strong> just won R${item.amount.toFixed(2)}`;
+          } else {
+            div.innerHTML = `🔥 <strong>${item.user}</strong> ${item.content}`;
+          }
+          container.appendChild(div);
+        });
+      }
+
+      function startPracticeMode() {
+        appState.game.isPractice = true;
+        appState.game.stake = 0;
+        appState.game.mode = 'practice';
+        showToast('Entering Practice Mode (Unlimited)', 'info');
+        startLiveGameActual();
+      }
+
+      async function startLiveGame(mode = 'normal') {
+        appState.game.isPractice = false; // Reset practice state
+        if (mode !== 'challenge' && mode !== 'pvp') {
+          appState.game.mode = 'normal';
+        }
+
+        if (appState.game.stake <= 0) return alert('Please select a stake.');
+        if ((appState.user.current?.balance || 0) < appState.game.stake) return alert('Insufficient balance. Please deposit.');
+
+        if (appState.game.mode === 'pvp' || mode === 'pvp') {
+          appState.game.mode = 'pvp';
+          showMatchmaking();
+        } else {
+          startLiveGameActual();
+        }
+      }
+
+      async function startLiveGameActual() {
+        loadingOverlay.show('Starting game...');
+        try {
+          await preloadQuestions();
+          if (!window.allQuestionsCache) {
+            loadingOverlay.hide();
+            showAlert('No questions available. Please try again later.', 'error');
+            return;
+          }
+
+          if (!appState.game.isPractice) {
+            // Deduct stake
+            const deductRes = await fetch('user_auth.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                action: 'deduct_stake',
+                user_id: appState.user.current.id,
+                amount: appState.game.stake
+              })
+            });
+            const deductData = await deductRes.json();
+            if (!deductData.success) {
+              loadingOverlay.hide();
+              showAlert('Failed to deduct stake: ' + deductData.error, 'error');
+              return;
+            }
+
+            const updatedUser = { ...appState.user.current, balance: deductData.new_balance };
+            updateUserInStorage(updatedUser);
+            updateBalance();
+          } else {
+            // Watermark for practice
+            el('liveStatusAlert').textContent = '🛠️ PRACTICE MODE - NO REWARDS';
+            el('liveStatusAlert').style.display = 'block';
+            el('liveStatusAlert').className = 'status-alert info';
+          }
+
+          hideStakeModal();
+          hide(el('liveStartScreen'));
+          show(el('liveGameScreen'));
+
+          appState.game.sessionId = 'session_' + Date.now().toString(36);
+          appState.game.totalQuestions = 0;
+          appState.game.correctAnswers = 0;
+          appState.game.wrongAnswers = 0;
+          appState.game.streak = 0;
+          appState.game.usedQuestions = {};
+
+          // PvP specifics
+          if (appState.game.mode === 'pvp') {
+            el('opponentProgressBox').style.display = 'block';
+            el('opponentNameLabel').textContent = el('matchOpponentName').textContent + ' Progress';
+            appState.game.opponentProgress = 0;
+            updateOpponentUI(0);
+            startOpponentSimulation();
+          } else {
+            el('opponentProgressBox').style.display = 'none';
+          }
+
+          const cats = await fetchCategories();
+          if (appState.game.mode !== 'challenge') {
+            appState.game.category = cats[Math.floor(Math.random() * cats.length)] || 'general';
+          }
+
+          initializeStreakCounter();
+          nextLiveQuestion();
+        } catch (error) {
+          loadingOverlay.hide();
+          showAlert('Failed to start game. Please try again.', 'error');
+        }
+      }
+
+      function updateOpponentUI(pct) {
+        el('opponentProgressPct').textContent = Math.round(pct) + '%';
+        el('opponentProgressFill').style.width = Math.round(pct) + '%';
+      }
+
+      let opponentSimInterval = null;
+      function startOpponentSimulation() {
+        if (opponentSimInterval) clearInterval(opponentSimInterval);
+        opponentSimInterval = setInterval(() => {
+          if (appState.game.opponentProgress >= 100 || !el('liveGameScreen').style.display === 'block') {
+            clearInterval(opponentSimInterval);
+            return;
+          }
+
+          // Mimic human behavior: sometimes fast, sometimes pauses
+          const randomFactor = Math.random();
+          if (randomFactor > 0.88) { // 12% chance to answer each second
+            // Add slight randomness to progress amount
+            const progress = (Math.random() > 0.3) ? 10 : 0;
+            appState.game.opponentProgress += progress;
+            updateOpponentUI(appState.game.opponentProgress);
+
+            if (appState.game.opponentProgress >= 100) {
+              clearInterval(opponentSimInterval);
+              showToast('Opponent finished!', 'warning');
+            }
+          }
+        }, 1000);
+      }
+
+      function setProgress(pct) {
+        const bar = el('progressFill');
+        if (bar) bar.style.width = Math.max(0, Math.min(100, pct)) + '%';
+        const txt = el('playerProgressPct');
+        if (txt) txt.textContent = Math.round(pct) + '%';
+      }
+
+      // FIX 1: Clear timer properly between questions
+      async function nextLiveQuestion() {
+        if (appState.game.totalQuestions >= 10) return liveEndGame('win');
+
+        // Clear any existing timer
+        if (liveTimerInterval) {
+          clearInterval(liveTimerInterval);
+          liveTimerInterval = null;
+        }
+
+        loadingOverlay.show('Loading next question...');
+        appState.game.totalQuestions += 1;
+        setProgress(appState.game.totalQuestions * 10);
+
+        el('liveQuestionNum').textContent = `${appState.game.totalQuestions}/10`;
+        el('liveCorrect').textContent = appState.game.correctAnswers;
+        el('liveStreak').textContent = appState.game.streak;
+        el('liveLevelBadge').textContent = `Question ${appState.game.totalQuestions}`;
+
+        // Difficulty Scaling & Timer Logic
+        let diff = 'easy';
+        let questionTimer = 15;
+
+        if (appState.game.totalQuestions <= 3) {
+          diff = 'easy';
+          questionTimer = 15;
+        } else if (appState.game.totalQuestions <= 7) {
+          diff = 'medium';
+          questionTimer = 12;
+        } else {
+          diff = 'hard';
+          questionTimer = 10;
+        }
+
+        const diffBadge = el('liveDiffBadge');
+        diffBadge.textContent = diff[0].toUpperCase() + diff.slice(1);
+        diffBadge.className = `badge diff${diff === 'hard' ? ' hard' : (diff === 'medium' ? ' medium' : '')}`;
+        appState.game.difficulty = diff;
+
+        const q = await fetchRandomQuestion(appState.game.category, diff, Object.keys(appState.game.usedQuestions));
+        if (!q) {
+          loadingOverlay.hide();
+          alert('No more questions available. Game over.');
+          return liveEndGame('no_questions');
+        }
+        appState.game.currentQuestionData = q;
+        appState.game.usedQuestions[q.id] = true;
+
+        el('liveCategoryTag').textContent = appState.game.category;
+        el('liveQuestion').textContent = q.question;
+
+        const emojiCont = el('liveEmojiContainer');
+        if (q.emojis || q.emoji) {
+          emojiCont.style.display = 'flex';
+          emojiCont.textContent = q.emojis || q.emoji;
+        } else {
+          emojiCont.style.display = 'none';
+        }
+
+        const optionsCont = el('liveOptionsContainer');
+        const options = el('liveOptions');
+        const answerInput = el('liveAnswer');
+        options.innerHTML = '';
+        liveSelectedOption = null;
+
+        if (Array.isArray(q.options) && q.options.length) {
+          optionsCont.style.display = 'block';
+          answerInput.style.display = 'none';
+          // Hide Submit button for MCQ — auto-submit on click
+          const submitBtn = el('liveSubmitBtn');
+          if (submitBtn) submitBtn.style.display = 'none';
+          q.options.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'option-btn';
+            btn.textContent = opt;
+            btn.addEventListener('click', () => {
+              if (isSubmitting) return; // block double-clicks
+              // Visually select the clicked option
+              document.querySelectorAll('#liveOptions .option-btn').forEach(b => b.classList.remove('selected'));
+              btn.classList.add('selected');
+              liveSelectedOption = opt;
+              // Disable all options immediately to prevent re-clicking
+              document.querySelectorAll('#liveOptions .option-btn').forEach(b => b.disabled = true);
+              // Stop timer and submit
+              if (liveTimerInterval) { clearInterval(liveTimerInterval); liveTimerInterval = null; }
+              const timerBox = el('liveTimerBox');
+              if (timerBox) timerBox.classList.remove('danger');
+              // Short delay so the selection highlight is visible before evaluation
+              setTimeout(liveSubmitAnswer, 300);
+            });
+            options.appendChild(btn);
+          });
+        } else {
+          optionsCont.style.display = 'none';
+          answerInput.style.display = 'block';
+          answerInput.value = '';
+
+          // FIX 7: Use single event handler for answer input
+          if (!answerInputHandler) {
+            answerInputHandler = () => {
+              el('liveSubmitBtn').disabled = !answerInput.value.trim();
+            };
+            answerInput.addEventListener('input', answerInputHandler);
+          }
+
+          el('liveSubmitBtn').disabled = true;
+        }
+
+        el('liveFeedback').innerHTML = '';
+        const cad = el('liveCorrectAnswerDisplay');
+        cad.style.display = 'none';
+
+        appState.game.timer = questionTimer;
+        el('liveTimer').textContent = appState.game.timer;
+        loadingOverlay.hide();
+        isSubmitting = false;
+        // Show/hide submit button based on question type
+        const submitBtnEl = el('liveSubmitBtn');
+        if (submitBtnEl) {
+          if (Array.isArray(q.options) && q.options.length) {
+            submitBtnEl.style.display = 'none'; // MCQ auto-submits
+          } else {
+            submitBtnEl.style.display = ''; // text input needs Submit
+            submitBtnEl.disabled = true;
+          }
+        }
+
+        // Reset timer box styling
+        const timerBox = el('liveTimerBox');
+        if (timerBox) timerBox.classList.remove('danger');
+
+        liveTimerInterval = setInterval(() => {
+          appState.game.timer -= 1;
+          el('liveTimer').textContent = appState.game.timer;
+
+          // Visual warning when time is low
+          if (appState.game.timer <= 5) {
+            if (timerBox) timerBox.classList.add('danger');
+            SoundManager.play('tick');
+          }
+
+          if (appState.game.timer <= 0) {
+            clearInterval(liveTimerInterval);
+            liveTimerInterval = null;
+            if (timerBox) timerBox.classList.remove('danger');
+            // Disable all option buttons on timeout
+            document.querySelectorAll('#liveOptions .option-btn').forEach(b => b.disabled = true);
+            liveSubmitAnswer('timeout');
+          }
+        }, 1000);
+      }
+
+      function liveSubmitAnswer(source) {
+        if (isSubmitting) return; // Prevent double-submit
+        isSubmitting = true;
+
+        const submitBtn = el('liveSubmitBtn');
+        if (submitBtn) submitBtn.disabled = true;
+
+        let correct = false;
+        let userAnswer = '';
+        const isTimeout = source === 'timeout';
+
+        const q = appState.game.currentQuestionData;
+        if (!q) return;
+
+        if (Array.isArray(q.options) && q.options.length) {
+          userAnswer = liveSelectedOption || '';
+          correct = !isTimeout && userAnswer !== '' && userAnswer.toLowerCase() === q.answer.toLowerCase();
+        } else {
+          if (isTimeout) {
+            correct = false;
+            userAnswer = '';
+          } else {
+            const ai = el('liveAnswer');
+            userAnswer = (ai.value || '').trim();
+            const target = (q.answer || '').trim();
+            correct = userAnswer.toLowerCase() === target.toLowerCase();
+            if (!correct) {
+              correct = userAnswer.replace(/\s+/g, ' ').toLowerCase() === target.replace(/\s+/g, ' ').toLowerCase();
+            }
+          }
+        }
+
+        saveQuestionData(userAnswer, correct).catch(() => { });
+
+        // Timeout with no selection — skip the question (don't end game)
+        if (isTimeout && !userAnswer) {
+          el('liveFeedback').innerHTML = '<div class="feedback incorrect">⏱ Time\'s up! Moving on...</div>';
+          const cad = el('liveCorrectAnswerDisplay');
+          cad.innerHTML = `<strong>Correct answer:</strong> ${q.answer}${q.explanation ? `<br><strong>Explanation:</strong> ${q.explanation}` : ''}`;
+          cad.style.display = 'block';
+          appState.game.wrongAnswers += 1;
+          appState.game.streak = 0;
+          el('liveStreak').textContent = 0;
+          updateStreakCounter();
+          if (appState.game.totalQuestions >= 10) {
+            setTimeout(() => liveEndGame('win'), 1500);
+          } else {
+            setTimeout(nextLiveQuestion, 2000);
+          }
+          return;
+        }
+
+        if (correct) {
+          SoundManager.play('correct');
+          appState.game.correctAnswers += 1;
+          appState.game.streak += 1;
+          el('liveCorrect').textContent = appState.game.correctAnswers;
+          el('liveStreak').textContent = appState.game.streak;
+
+          const fb = el('liveFeedback');
+          fb.innerHTML = '<div class="feedback correct feedback-pop">✓ Correct!</div>';
+
+          if (Array.isArray(q.options) && q.options.length) {
+            document.querySelectorAll('#liveOptions .option-btn').forEach(btn => {
+              if (btn.textContent === q.answer) btn.classList.add('correct-answer');
+            });
+          }
+          updateStreakCounter();
+          if (appState.game.totalQuestions >= 10) {
+            setTimeout(() => liveEndGame('win'), 1000);
+          } else {
+            setTimeout(nextLiveQuestion, 900);
+          }
+        } else {
+          SoundManager.play('wrong');
+          appState.game.wrongAnswers += 1;
+          appState.game.streak = 0;
+          el('liveStreak').textContent = 0;
+          const feedbackMsg = isTimeout && !userAnswer
+            ? '⏱ Time\'s up!'
+            : '✗ Incorrect';
+          el('liveFeedback').innerHTML = `<div class="feedback incorrect feedback-pop">${feedbackMsg}</div>`;
+          if (Array.isArray(q.options) && q.options.length) {
+            document.querySelectorAll('#liveOptions .option-btn').forEach(btn => {
+              if (btn.textContent === q.answer) btn.classList.add('correct-answer');
+              if (btn.textContent === liveSelectedOption) btn.classList.add('wrong-answer');
+            });
+          }
+          const cad = el('liveCorrectAnswerDisplay');
+          cad.innerHTML = `<strong>Correct answer:</strong> ${q.answer}${q.explanation ? `<br><strong>Explanation:</strong> ${q.explanation}` : ''}`;
+          cad.style.display = 'block';
+          updateStreakCounter();
+          setTimeout(() => liveEndGame('one_strike'), 1500);
+        }
+      }
+
+      async function saveQuestionData(userAnswer, isCorrect) {
+        try {
+          const res = await fetch('save_question_data.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              session_id: appState.game.sessionId,
+              question_number: appState.game.totalQuestions,
+              category: appState.game.category,
+              difficulty: difficultyProgression[appState.game.totalQuestions - 1],
+              question_text: appState.game.currentQuestionData.question,
+              user_answer: userAnswer,
+              correct_answer: appState.game.currentQuestionData.answer,
+              is_correct: isCorrect,
+              time_taken: 20 - appState.game.timer,
+              username: appState.user.current?.username || 'anonymous'
+            })
+          });
+          if (!res.ok) throw new Error('Save failed');
+        } catch { }
+      }
+
+      function liveEndGame(reason) {
+        // Clear timer properly
+        if (liveTimerInterval) {
+          clearInterval(liveTimerInterval);
+          liveTimerInterval = null;
+        }
+        // Reset timer box styling
+        const timerBox = el('liveTimerBox');
+        if (timerBox) timerBox.classList.remove('danger');
+
+        hide(el('liveGameScreen'));
+        show(el('liveEndScreen'));
+
+        const user = appState.user.current;
+        let winAmount = 0, netGain = 0, message = '';
+
+        if (reason === 'win') {
+          // Perfect Game Milestone: 10 Correct -> 3x Money
+          winAmount = appState.game.stake * 3;
+          netGain = winAmount - appState.game.stake;
+          message = `🏆 PERFECT GAME! You solved all 10 questions. 3x MULTIPLIER applied! You earned R${winAmount} total.`;
+        } else if (appState.game.correctAnswers >= 5) {
+          // 5 Correct Milestone: 2x Money (Safety Net)
+          winAmount = appState.game.stake * 2;
+          netGain = winAmount - appState.game.stake;
+          message = `🔥 Milestone Reached! You got ${appState.game.correctAnswers} correct. 2x STREAK MULTIPLIER applied! You earned R${winAmount} total.`;
+        } else if (reason === 'one_strike') {
+          netGain = -appState.game.stake;
+          message = `Game over. You got ${appState.game.correctAnswers} correct. You need at least 5 to earn rewards. You lost your R${appState.game.stake} stake.`;
+        } else {
+          message = `Game ended. You answered ${appState.game.correctAnswers} correctly.`;
+        }
+
+        // Show rating section (deferred for win, immediate for others)
+        const showRating = () => {
+          const r = el('ratingCommentSection');
+          if (r) r.style.display = 'block';
+          initRatingStars();
+        };
+        if (reason === 'win') setTimeout(showRating, 1200);
+        else showRating();
+
+        // Update user stats
+        const updatedUser = { ...user };
+        updatedUser.gamesPlayed = (updatedUser.gamesPlayed || 0) + 1;
+        updatedUser.totalWinnings = (updatedUser.totalWinnings || 0) + (netGain > 0 ? netGain : 0);
+        updatedUser.correctAnswers = (updatedUser.correctAnswers || 0) + appState.game.correctAnswers;
+        updatedUser.wrongAnswers = (updatedUser.wrongAnswers || 0) + appState.game.wrongAnswers;
+
+        if (appState.game.streak > (updatedUser.bestStreak || 0)) {
+          updatedUser.bestStreak = appState.game.streak;
+        }
+
+        updatedUser.avgScore = Math.round(updatedUser.totalWinnings / updatedUser.gamesPlayed);
+
+        if (!updatedUser.gameHistory) updatedUser.gameHistory = [];
+        updatedUser.gameHistory.unshift({
+          date: new Date().toLocaleDateString(),
+          score: appState.game.correctAnswers,
+          stake: appState.game.stake,
+          winnings: netGain > 0 ? netGain : 0
+        });
+        if (updatedUser.gameHistory.length > 10) {
+          updatedUser.gameHistory = updatedUser.gameHistory.slice(0, 10);
+        }
+
+        if (reason === 'win') {
+          // The backend save_game_session.php will process transaction math
+          // It's still good to update UI mockups before server overrides it for fluidity
+          updatedUser.balance = (updatedUser.balance || 0) + winAmount;
+        }
+
+        // Display preliminary stats before fetching the real database values
+        el('liveFinalScore').textContent = 'R' + (updatedUser.balance || 0);
+        el('liveMessage').textContent = message;
+        el('livePlayerName').textContent = updatedUser.username || 'Player';
+
+        // Save game session to backend
+        saveGameSession(reason, updatedUser, netGain, winAmount).then(async () => {
+          // Synchronize user stats with database layer to prevent tampered localStorage bypass
+          try {
+            const stRes = await fetch('user_auth.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ action: 'get_user_stats', user_id: updatedUser.id })
+            });
+            const data = await stRes.json();
+            if (data.success && data.user) {
+              // Re-inject real stats securely
+              Object.assign(updatedUser, data.user);
+              appState.user.current = updatedUser;
+              localStorage.setItem('currentUser', JSON.stringify(updatedUser)); // For resuming sessions securely
+              el('liveFinalScore').textContent = 'R' + (updatedUser.balance || 0);
+              updateBalance();
+            }
+          } catch (e) { }
+        }).catch(() => { });
+
+        el('liveStats').innerHTML = `
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+            <div class="stake-card"><div class="stake-amount">${appState.game.correctAnswers}</div><div class="stake-reward">Correct</div></div>
+            <div class="stake-card"><div class="stake-amount">${appState.game.wrongAnswers}</div><div class="stake-reward">Wrong</div></div>
+            <div class="stake-card"><div class="stake-amount">R${appState.game.stake}</div><div class="stake-reward">Stake</div></div>
+            <div class="stake-card"><div class="stake-amount">R${netGain > 0 ? netGain : 0}</div><div class="stake-reward">Winnings</div></div>
+          </div>
+        `;
+      }
+
+      // Save game session to backend
+      async function saveGameSession(reason, user, net_gain = 0, payout_amount = 0) {
+        try {
+          await fetch('save_game_session.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              session_id: appState.game.sessionId,
+              username: user.username || user.email || 'anonymous',
+              stake_amount: appState.game.stake,
+              total_questions: appState.game.totalQuestions,
+              correct_answers: appState.game.correctAnswers,
+              wrong_answers: appState.game.wrongAnswers,
+              final_balance: user.balance || 0,
+              net_gain: net_gain,
+              payout_amount: payout_amount,
+              rating: userRating,
+              comment: el('commentBox')?.value || ''
+            })
+          });
+        } catch { }
+      }
+
+      function livePlayAgain() {
+        hide(el('liveEndScreen'));
+        show(el('liveStartScreen'));
+        hide(el('ratingCommentSection'));
+        hide(el('feedbackThankYou'));
+        userRating = 0;
+        starsInitialized = false; // Allow re-init on next game
+        document.querySelectorAll('.star').forEach(s => { s.style.color = '#ddd'; s.style.transform = 'scale(1.0)'; });
+        const c = el('commentBox'); if (c) c.value = '';
+        appState.game = {
+          stake: 0, totalQuestions: 0, correctAnswers: 0, wrongAnswers: 0, streak: 0,
+          timer: 30, sessionId: '', usedQuestions: {}, currentQuestionData: null, category: ''
+        };
+      }
+
+      // Prevent duplicate event listeners on rating stars
+      let starsInitialized = false;
+      function initRatingStars() {
+        if (starsInitialized) return;
+        starsInitialized = true;
+        document.querySelectorAll('.star').forEach(star => {
+          star.addEventListener('click', function () {
+            const rating = parseInt(this.getAttribute('data-rating'), 10);
+            userRating = rating;
+            document.querySelectorAll('.star').forEach(s => {
+              const r = parseInt(s.getAttribute('data-rating'), 10);
+              s.style.color = r <= rating ? '#FFD700' : '#ddd';
+              s.style.transform = r <= rating ? 'scale(1.1)' : 'scale(1.0)';
+            });
+          });
+        });
+      }
+
+      async function submitFeedback() {
+        if (userRating === 0) return alert('Please select a rating.');
+
+        try {
+          const res = await fetch('api/interactions.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'submit_feedback',
+              user_id: appState.user.current?.id,
+              session_id: appState.game.sessionId,
+              rating: userRating,
+              comment: el('commentBox').value.trim()
+            })
+          });
+          const data = await res.json();
+          if (data.success) {
+            hide(el('ratingCommentSection'));
+            show(el('feedbackThankYou'));
+          } else {
+            alert(data.error || 'Failed to submit feedback.');
+          }
+        } catch (e) {
+          alert('Network error. Failed to submit feedback.');
+        }
+      }
+
+      /* Password reset */
+      function showPasswordResetModal() {
+        const modal = document.createElement('div');
+        modal.className = 'modal active';
+        modal.innerHTML = `
+          <div class="modal-content">
+            <div class="modal-header">
+              <span>🔐 Reset password</span>
+              <button class="close-modal" data-action="removeModal" aria-label="Close">×</button>
+            </div>
+            <div class="modal-body">
+              <p>Enter your email to receive reset instructions.</p>
+              <div class="form-group">
+                <label for="resetEmail">Email address</label>
+                <input type="email" id="resetEmail" placeholder="you@example.com" />
+              </div>
+              <div class="alert-message" id="resetAlert"></div>
+            </div>
+            <div style="display:flex;gap:6px">
+              <button class="btn" data-action="sendPasswordReset">Send reset link</button>
+              <button class="btn btn-secondary" data-action="removeModal">Cancel</button>
+            </div>
+          </div>`;
+        document.body.appendChild(modal);
+      }
+
+      async function sendPasswordReset() {
+        const email = document.getElementById('resetEmail')?.value.trim();
+        const alertEl = document.getElementById('resetAlert');
+        if (!alertEl) return;
+
+        if (!patterns.email.test(email)) {
+          alertEl.className = 'alert-message alert-error';
+          alertEl.textContent = 'Please enter a valid email.';
+          alertEl.style.display = 'block';
+          return;
+        }
+
+        alertEl.className = 'alert-message alert-info';
+        alertEl.textContent = 'Sending reset link...';
+        alertEl.style.display = 'block';
+
+        try {
+          const res = await fetch('api/interactions.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'send_password_reset',
+              email: email
+            })
+          });
+          const data = await res.json();
+          if (data.success) {
+            alertEl.className = 'alert-message alert-success';
+            alertEl.textContent = data.message;
+            setTimeout(() => {
+              const modal = alertEl.closest('.modal');
+              if (modal) modal.remove();
+            }, 2500);
+          } else {
+            alertEl.className = 'alert-message alert-error';
+            alertEl.textContent = data.error || 'Failed to send reset link.';
+          }
+        } catch (e) {
+          alertEl.className = 'alert-message alert-error';
+          alertEl.textContent = 'Network error. Please try again.';
+        }
+      }
+
+      /* Modal removal */
+      function removeModal(e) {
+        // Walk from original click target (not delegated target) to find modal
+        const modal = e.target.closest('.modal');
+        if (modal) modal.remove();
+      }
+
+      /* Accordion */
+      function toggleAccordion(e) {
+        const accordion = e.target.closest('.accordion');
+        accordion.classList.toggle('active');
+      }
+
+      /* Bottom navigation */
+      function navigateTo(page) {
+        // Reset all nav items
+        document.querySelectorAll('.nav-item').forEach(item => {
+          item.classList.remove('active');
+        });
+
+        // Activate the clicked nav item
+        const clickedItem = document.querySelector(`.nav-item[data-args="${page}"]`);
+        if (clickedItem) {
+          clickedItem.classList.add('active');
+        }
+
+        // Handle navigation based on page
+        switch (page) {
+          case 'home':
+            hide(el('liveGameScreen'));
+            hide(el('liveEndScreen'));
+            show(el('liveStartScreen'));
+            break;
+          case 'challenge':
+            showLeaderboardModal('allTime');
+            break;
+          case 'wallet':
+            showBankModal('deposit');
+            break;
+          case 'profile':
+            showProfileModal();
+            break;
+        }
+      }
+
+      function initBottomNavigation() {
+        // Set home as active by default
+        document.querySelectorAll('.nav-item').forEach(item => {
+          if (item.getAttribute('data-args') === 'home') {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+      }
+
+      /* Event delegation - FIXED: Handle menu items with data-args */
+      document.body.addEventListener('click', (e) => {
+        let target = e.target;
+
+        // Find the closest element with data-action
+        while (target && !target.dataset.action && target !== document.body) {
+          target = target.parentElement;
+        }
+
+        if (!target || !target.dataset.action) return;
+
+        const action = target.dataset.action;
+        const args = target.dataset.args;
+
+        if (!action) return;
+
+        // Handle multiple actions separated by semicolons
+        const actions = action.split(';');
+        actions.forEach(act => {
+          const [fn, arg] = act.split(':').map(s => s.trim());
+
+          // Use data-args if no colon argument is provided
+          const finalArg = arg || args;
+
+          // Sound feedback for any user action
+          SoundManager.play('click');
+
+          switch (fn) {
+            case 'showAuthModal': showAuthModal(); break;
+            case 'hideAuthModal': hideAuthModal(); break;
+            case 'switchAuthTab': switchAuthTab(finalArg); break;
+            case 'login': login(); break;
+            case 'register': register(); break;
+            case 'handleLoginLogout': handleLoginLogout(); break;
+            case 'showBankModal': showBankModal(finalArg); break;
+            case 'hideBankModal': hideBankModal(); break;
+            case 'switchBankTab': switchBankTab(finalArg); break;
+            case 'processDeposit': processDeposit(); break;
+            case 'processWithdrawal': processWithdrawal(); break;
+            case 'showReferralModal': showReferralModal(); break;
+            case 'hideReferralModal': hideReferralModal(); break;
+            case 'copyReferralCode': copyReferralCode(); break;
+            case 'showTransactionsModal': showTransactionsModal(); break;
+            case 'hideTransactionsModal': hideTransactionsModal(); break;
+            case 'showTermsModal': showTermsModal(); break;
+            case 'hideTermsModal': hideTermsModal(); break;
+            case 'showPrivacyModal': showPrivacyModal(); break;
+            case 'hidePrivacyModal': hidePrivacyModal(); break;
+            case 'showAboutModal': showAboutModal(); break;
+            case 'hideAboutModal': hideAboutModal(); break;
+            case 'showSupportModal': showSupportModal(); break;
+            case 'hideSupportModal': hideSupportModal(); break;
+            case 'submitSupportRequest': submitSupportRequest(); break;
+            case 'downloadApp': downloadApp(); break;
+            case 'checkLiveAuthStatus': checkLiveAuthStatus(); break;
+            case 'showStakeModal': showStakeModal(finalArg); break;
+            case 'hideStakeModal': hideStakeModal(); break;
+            case 'startLiveGame': startLiveGame(finalArg); break;
+            case 'liveSubmitAnswer': liveSubmitAnswer(); break;
+            case 'startChallenge': startChallenge(finalArg); break;
+            case 'startPracticeMode': startPracticeMode(); break;
+            case 'liveEndGameManually': liveEndGame('manual'); break;
+            case 'livePlayAgain': livePlayAgain(); break;
+            case 'submitFeedback': submitFeedback(); break;
+            case 'showPasswordResetModal': showPasswordResetModal(); break;
+            case 'sendPasswordReset': sendPasswordReset(); break;
+            case 'removeModal': removeModal(e); break;
+            case 'toggleAccordion': toggleAccordion(e); break;
+            case 'navigate': navigateTo(finalArg); break;
+            case 'showProfileModal': showProfileModal(); break;
+            case 'hideProfileModal': hideProfileModal(); break;
+            case 'showLeaderboardModal': showLeaderboardModal(); break;
+            case 'hideLeaderboardModal': hideLeaderboardModal(); break;
+            case 'switchLeaderboardTab': switchLeaderboardTab(finalArg); break;
+            case 'showBattlesTeaser': showBattlesTeaser(); break;
+            case 'showAllCategories': showAllCategories(); break;
+            case 'selectCategory': selectCategory(finalArg); break;
+          }
+        });
+      });
+
+      /* Init */
+      window.addEventListener('DOMContentLoaded', () => {
+        simulateLoadingProgress();
+        loadSaved();
+        initBottomNavigation();
+        fetchRecentActivity();
+        setInterval(fetchRecentActivity, 60000); // Refresh activity every minute
+
+        // Unlock AudioContext on first interaction
+        const unlockAudio = () => {
+          SoundManager.init();
+          document.removeEventListener('click', unlockAudio);
+          document.removeEventListener('touchstart', unlockAudio);
+        };
+        document.addEventListener('click', unlockAudio);
+        document.addEventListener('touchstart', unlockAudio);
+
+        // FIX 2: Add event listeners for payment method toggle
+        document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+          radio.addEventListener('change', (e) => {
+            if (e.target.value === 'card') {
+              el('cardDetails').style.display = 'block';
+              el('eftDetails').style.display = 'none';
+            } else {
+              el('cardDetails').style.display = 'none';
+              el('eftDetails').style.display = 'block';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>
